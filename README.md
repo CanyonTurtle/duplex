@@ -57,9 +57,21 @@ The cost of a candidate is `per_alg_weight + per_move_weight * move_count`:
 - blend both for something in between
 
 Other flags: `--max-algs N` caps how many algs it's allowed to pick,
-`--out set.json` writes the chosen set plus the full per-case report.
+`--seed known.csv` treats another candidate file as already-learned (free)
+and searches only for what to add on top, `--out set.json` writes the
+chosen set plus the full per-case report.
 
 Run `cargo run --release -- solve --help` / `optimize --help` for the rest.
+
+Both subcommands also take `--out-txt report.txt` for a human-readable
+report: the basis algs, a stat breakdown (cases solved, total/average moves),
+then every case with the exact alg(s) and move sequence that solve it.
+[`candidate-alg-sets/`](candidate-alg-sets) has example candidate lists and
+their generated reports:
+- `original-12` — `ctduplexer/duplexalgs.csv` as-is: 492/493
+- `nine-basis` — the 8-alg optimized basis plus one hand-picked addition: 492/493
+- `ten-basis-complete` — `nine-basis` plus one more addition: **493/493, full ZBLL coverage**
+- `site-broad` — this repo's own default alg list (32 algs), reduced via `optimize`: 9 algs, 491/493
 
 TODO
 

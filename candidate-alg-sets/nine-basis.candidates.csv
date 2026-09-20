@@ -1,0 +1,9 @@
+R U R' U R U2 R',fb,yes
+R U R' U R U L' U R' U' L,fb,yes
+R2 D' R U2 R' D R U2 R,fb,yes
+R' U2 R F U' R' U' R U F',no,yes
+R U R' U R U' R' U R U2 R',fb,yes
+R U R' F' R U R' U' R' F R2 U' R',fb,yes
+R U R' U R' U' R2 U' R2 U2 R,fb,yes
+F U R U2 R' U R U R' F',no,yes
+F R U' R' U' R U R' F' R U R' U' R' F R F',fb,yes

@@ -58,6 +58,11 @@ struct SolveArgs {
     #[arg(short, long)]
     out: Option<PathBuf>,
 
+    /// Write a human-readable text report (basis, stats, per-case solutions)
+    /// to this path.
+    #[arg(long)]
+    out_txt: Option<PathBuf>,
+
     /// Print every unsolved case's LL diagram to stdout.
     #[arg(long)]
     show_unsolved: bool,
@@ -110,9 +115,21 @@ struct OptimizeArgs {
     #[arg(short, long)]
     out: Option<PathBuf>,
 
+    /// Write a human-readable text report (basis, stats, per-case solutions)
+    /// to this path.
+    #[arg(long)]
+    out_txt: Option<PathBuf>,
+
     /// Suppress warnings about candidate lines that failed to parse.
     #[arg(long)]
     quiet: bool,
+}
+
+/// One alg in a reported basis: a label (its move string / name) plus the
+/// move count it's charged for learning.
+struct BasisEntry {
+    label: String,
+    cost_moves: usize,
 }
 
 #[derive(Clone, Copy, PartialEq, Eq)]
@@ -158,6 +175,13 @@ pub fn run() {
 fn run_solve(args: SolveArgs) {
     let (candidates, errors) = candidates::load(&args.algs);
     warn(&errors, args.quiet);
+    let basis: Vec<BasisEntry> = candidates
+        .iter()
+        .map(|c| BasisEntry {
+            label: c.label.clone(),
+            cost_moves: c.cost_moves,
+        })
+        .collect();
     let algs: Vec<Alg> = candidates.into_iter().flat_map(|c| c.variants).collect();
     if algs.is_empty() {
         eprintln!(
@@ -185,6 +209,11 @@ fn run_solve(args: SolveArgs) {
         let content = json!({ "cases": case_entries(&cases, &solutions) });
         write_json(out, &content);
         println!("wrote full report to {}", out.display());
+    }
+
+    if let Some(path) = &args.out_txt {
+        write_text_report(path, args.case_set.label(), &basis, &cases, &solutions);
+        println!("wrote text report to {}", path.display());
     }
 }
 
@@ -214,7 +243,7 @@ fn run_optimize(args: OptimizeArgs) {
         per_move: args.per_move_weight,
     };
 
-    let seed_variants: Vec<Alg> = match &args.seed {
+    let (seed_basis, seed_variants): (Vec<BasisEntry>, Vec<Alg>) = match &args.seed {
         Some(path) => {
             let (seed_candidates, seed_errors) = candidates::load(path);
             warn(&seed_errors, args.quiet);
@@ -223,9 +252,17 @@ fn run_optimize(args: OptimizeArgs) {
                 seed_candidates.len(),
                 path.display()
             );
-            seed_candidates.into_iter().flat_map(|c| c.variants).collect()
+            let basis = seed_candidates
+                .iter()
+                .map(|c| BasisEntry {
+                    label: c.label.clone(),
+                    cost_moves: c.cost_moves,
+                })
+                .collect();
+            let variants = seed_candidates.into_iter().flat_map(|c| c.variants).collect();
+            (basis, variants)
         }
-        None => Vec::new(),
+        None => (Vec::new(), Vec::new()),
     };
 
     let report = optimize::greedy_cover(
@@ -282,6 +319,16 @@ fn run_optimize(args: OptimizeArgs) {
         });
         write_json(out, &content);
         println!("wrote full report to {}", out.display());
+    }
+
+    if let Some(path) = &args.out_txt {
+        let mut basis = seed_basis;
+        basis.extend(report.picked.iter().map(|p| BasisEntry {
+            label: p.label.clone(),
+            cost_moves: p.cost_moves,
+        }));
+        write_text_report(path, args.case_set.label(), &basis, &cases, &report.solutions);
+        println!("wrote text report to {}", path.display());
     }
 }
 
@@ -366,6 +413,78 @@ fn case_entries(cases: &[Case], solutions: &HashMap<u64, Vec<Solution>>) -> Vec<
             })
         })
         .collect()
+}
+
+/// Human-readable report: the basis algs, a stat breakdown, then how every
+/// case is solved (which expansion of which basis alg, and the exact
+/// sequence with AUFs).
+fn write_text_report(
+    path: &Path,
+    case_set_label: &str,
+    basis: &[BasisEntry],
+    cases: &[Case],
+    solutions: &HashMap<u64, Vec<Solution>>,
+) {
+    let mut out = String::new();
+
+    let basis_moves: usize = basis.iter().map(|b| b.cost_moves).sum();
+    out.push_str(&format!("BASIS ({} algs, {} moves)\n", basis.len(), basis_moves));
+    for (i, entry) in basis.iter().enumerate() {
+        out.push_str(&format!("{}. {} ({} moves)\n", i + 1, entry.label, entry.cost_moves));
+    }
+    out.push('\n');
+
+    let total = cases.len();
+    let mut solved_count = 0;
+    let mut solved_moves = 0;
+    for case in cases {
+        if let Some(best) = solutions.get(&case.ll_index).and_then(|s| s.first()) {
+            solved_count += 1;
+            solved_moves += best.move_count;
+        }
+    }
+    let avg_moves = if solved_count > 0 {
+        format!("{:.2}", solved_moves as f64 / solved_count as f64)
+    } else {
+        "n/a".to_string()
+    };
+
+    out.push_str("STATS\n");
+    out.push_str(&format!("case set: {}\n", case_set_label));
+    out.push_str(&format!(
+        "solved: {} / {} ({:.1}%)\n",
+        solved_count,
+        total,
+        100.0 * solved_count as f64 / total as f64,
+    ));
+    out.push_str(&format!("total moves across solved cases' solutions: {}\n", solved_moves));
+    out.push_str(&format!("average moves per solved case: {}\n", avg_moves));
+    out.push('\n');
+
+    out.push_str("CASES\n");
+    for case in cases {
+        match solutions.get(&case.ll_index).and_then(|s| s.first()) {
+            Some(best) => {
+                out.push_str(&format!(
+                    "case {} (ll_index {}): SOLVED, depth {}, {} moves\n",
+                    case.index, case.ll_index, best.depth, best.move_count,
+                ));
+                out.push_str(&format!("  via: {}\n", best.alg_names.join(" + ")));
+                out.push_str(&format!("  {}\n", best.sequence));
+            }
+            None => {
+                out.push_str(&format!(
+                    "case {} (ll_index {}): UNSOLVED\n",
+                    case.index, case.ll_index,
+                ));
+            }
+        }
+    }
+
+    fs::write(path, out).unwrap_or_else(|err| {
+        eprintln!("error: couldn't write {}: {}", path.display(), err);
+        std::process::exit(1);
+    });
 }
 
 fn write_json(path: &Path, content: &Value) {

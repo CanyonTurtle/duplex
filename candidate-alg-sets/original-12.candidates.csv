@@ -1,0 +1,12 @@
+R U R' U R U2 R',fb,yes 
+R U R' U' R' F R F',no,yes
+R' U' R' F R F' U R,no,yes 
+R U R' U' R' F R2 U R' U' F',no,yes
+R' U2 R F U' R' U' R U F',no,yes
+R U R' U R U' R' U R U2 R',fb,yes
+F U R U2 R' U R U R' F',no,yes
+R2 D' R U2 R' D R U2 R,fb,yes
+R U R' F' R U R' U' R' F R2 U' R',fb,yes
+Rw U' Rw' U' Rw U Rw' F' U F,no,yes
+R U R' U R' U' R2 U' R2 U2 R,fb,yes
+R U R' U R U L' U R' U' L,fb,yes

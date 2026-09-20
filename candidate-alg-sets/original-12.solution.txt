@@ -1,0 +1,1498 @@
+BASIS (12 algs, 119 moves)
+1. R U R' U R U2 R' (7 moves)
+2. R U R' U' R' F R F' (8 moves)
+3. R' U' R' F R F' U R (8 moves)
+4. R U R' U' R' F R2 U R' U' F' (11 moves)
+5. R' U2 R F U' R' U' R U F' (10 moves)
+6. R U R' U R U' R' U R U2 R' (11 moves)
+7. F U R U2 R' U R U R' F' (10 moves)
+8. R2 D' R U2 R' D R U2 R (9 moves)
+9. R U R' F' R U R' U' R' F R2 U' R' (13 moves)
+10. Rw U' Rw' U' Rw U Rw' F' U F (10 moves)
+11. R U R' U R' U' R2 U' R2 U2 R (11 moves)
+12. R U R' U R U L' U R' U' L (11 moves)
+
+STATS
+case set: ZBLL
+solved: 492 / 493 (99.8%)
+total moves across solved cases' solutions: 9360
+average moves per solved case: 19.02
+
+CASES
+case 3 (ll_index 418093820544083): SOLVED, depth 2, 23 moves
+  via: invert RUR'URU'R'URU2R' + invert RUR'URU'R'URU2R'
+  R U2 R' U' R U R' U' R U' R' U R U2 R' U' R U R' U' R U' R'
+case 7 (ll_index 612462565524563): SOLVED, depth 2, 23 moves
+  via: invert RUR'URU'R'URU2R' + invert RUR'URU'R'URU2R'
+  R U2 R' U' R U R' U' R U' R' U' R U2 R' U' R U R' U' R U' R'
+case 13 (ll_index 212150138700883): SOLVED, depth 2, 15 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URU2R'
+  R U2 R' U' R U' R' U' R' U2 R U R' U R
+case 21 (ll_index 423204831626323): SOLVED, depth 2, 15 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU2R'
+  R' U2 R U R' U R U R U2 R' U' R U' R'
+case 29 (ll_index 222973455482601): SOLVED, depth 1, 13 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R'
+  R' U' R B R' U' R U R B' R2 U R
+case 37 (ll_index 812844263915241): SOLVED, depth 1, 13 moves
+  via: RUR'F'RUR'U'R'FR2U'R'
+  R U R' F' R U R' U' R' F R2 U' R'
+case 45 (ll_index 807582928977641): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U' R' U2 R' D' R U2 R' D R2 R' U2 R F U' R' U' R U F'
+case 53 (ll_index 607050905927401): SOLVED, depth 2, 23 moves
+  via: invert RUR'URUL'UR'U'L + invert RUR'URU'R'URU2R'
+  L' U R U' L U' R' U' R U' R' U' R U2 R' U' R U R' U' R U' R'
+case 61 (ll_index 406969854443241): SOLVED, depth 2, 22 moves
+  via: invert RUR'URUL'UR'U'L + mirror RUR'URU'R'URU2R'
+  L' U R U' L U' R' U' R U' R' R' U' R U' R' U R U' R' U2 R
+case 69 (ll_index 818556570418921): SOLVED, depth 2, 23 moves
+  via: RwU'Rw'U'RwURw'F'UF + RUR'U'R'FR2UR'U'F'
+  U' r U' r' U' r U r' F' U F U' R U R' U' R' F R2 U R' U' F'
+case 77 (ll_index 211999814041321): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  U' R2 D R' U2 R D' R' U2 R' U' R' U2 R' D' R U2 R' D R2
+case 85 (ll_index 623586530017001): SOLVED, depth 2, 20 moves
+  via: R2D'RU2R'DRU2R + invert mirror R2D'RU2R'DRU2R
+  U R2 D' R U2 R' D R U2 R U R U2 R D R' U2 R D' R2
+case 93 (ll_index 423505478532841): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U' R' U2 R' D' R U2 R' D R2 U' F U' R' U R U F' R' U2 R
+case 101 (ll_index 417642848173801): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U R U2 R D R' U2 R D' R2 U2 R' U2 R F U' R' U' R U F'
+case 109 (ll_index 217712120545001): SOLVED, depth 2, 20 moves
+  via: FURU2R'URUR'F' + invert R2D'RU2R'DRU2R
+  F U R U2 R' U R U R' F' U R' U2 R' D' R U2 R' D R2
+case 117 (ll_index 612913536286441): SOLVED, depth 2, 21 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror R2D'RU2R'DRU2R
+  U' F U' R' U R U F' R' U2 R U2 R2 D R' U2 R D' R' U2 R'
+case 125 (ll_index 222973311246607): SOLVED, depth 2, 22 moves
+  via: invert RwU'Rw'U'RwURw'F'UF + invert RUR'U'R'FR2UR'U'F'
+  U2 F' U' F r U' r' U r U r' F U R U' R2 F' R U R U' R'
+case 133 (ll_index 812844119679247): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + invert FURU2R'URUR'F'
+  R2 D R' U2 R D' R' U2 R' U2 F R U' R' U' R U2 R' U' F'
+case 141 (ll_index 406969710207247): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URUL'UR'U'L + mirror RUR'URUL'UR'U'L
+  L U' R' U L' U R U R' U R U2 R' U' R U' R' U' L U' R U L'
+case 145 (ll_index 818556426182927): SOLVED, depth 2, 23 moves
+  via: invert RUR'URUL'UR'U'L + RUR'URUL'UR'U'L
+  L' U R U' L U' R' U' R U' R' U2 R U R' U R U L' U R' U' L
+case 149 (ll_index 211999669805327): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + mirror R2D'RU2R'DRU2R
+  U' R' U2 R' D' R U2 R' D R2 U2 R2 D R' U2 R D' R' U2 R'
+case 155 (ll_index 807432813370923): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' U R' U2 R U R' U' R U R' U R
+case 163 (ll_index 418094027988523): SOLVED, depth 1, 12 moves
+  via: invert RUR'UR'U'R2U'R2U2R
+  U' R' U2 R2 U R2 U R U' R U' R'
+case 171 (ll_index 612462772969003): SOLVED, depth 2, 16 moves
+  via: mirror RUR'URU2R' + invert RUR'URU2R'
+  U R' U' R U' R' U2 R U' R U2 R' U' R U' R'
+case 179 (ll_index 223123987586603): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + mirror RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' R' U' R U' R' U R U' R' U2 R
+case 187 (ll_index 212150346145323): SOLVED, depth 1, 7 moves
+  via: RUR'URU2R'
+  R U R' U R U2 R'
+case 195 (ll_index 423205039070763): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU'R'URU2R' + mirror RUR'URU2R'
+  U2 R' U' R U' R' U R U' R' U2 R U R' U' R U' R' U2 R
+case 203 (ll_index 813145119874603): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU'R'URU2R' + mirror RUR'URU2R'
+  R' U' R U' R' U R U' R' U2 R U' R' U' R U' R' U2 R
+case 211 (ll_index 818406454812203): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' U2 R U R' U R U' R' U R U2 R'
+case 219 (ll_index 406819738836523): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + invert RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' U' R U2 R' U' R U R' U' R U' R'
+case 227 (ll_index 607351761886763): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URU'R'URU2R' + mirror RUR'URU2R'
+  U R' U2 R U R' U' R U R' U R U2 R' U' R U' R' U2 R
+case 235 (ll_index 217411681082923): SOLVED, depth 1, 8 moves
+  via: invert mirror RUR'URU2R'
+  U' R' U2 R U R' U R
+case 243 (ll_index 623737062121003): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + invert RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' U R U2 R' U' R U R' U' R U' R'
+case 251 (ll_index 222973539978747): SOLVED, depth 2, 21 moves
+  via: FURU2R'URUR'F' + invert R'U2RFU'R'U'RUF'
+  F U R U2 R' U R U R' F' U F U' R' U R U F' R' U2 R
+case 259 (ll_index 812844348411387): SOLVED, depth 2, 20 moves
+  via: R'U2RFU'R'U'RUF' + R2D'RU2R'DRU2R
+  R' U2 R F U' R' U' R U F' U2 R2 D' R U2 R' D R U2 R
+case 267 (ll_index 807583013473787): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert RUR'URUL'UR'U'L
+  R' U' R U' R' U2 R U' L' U R U' L U' R' U' R U' R'
+case 275 (ll_index 607050990423547): SOLVED, depth 2, 20 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  U R U2 R' U' R U' R' U2 L U' R' U L' U R U R' U R
+case 283 (ll_index 406969938939387): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  U L U' R' U L' U R U R' U R U2 R' U' R U' R' U2 R
+case 291 (ll_index 818556654915067): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + FURU2R'URUR'F'
+  U2 R' U2 R U R' U R U2 F U R U2 R' U R U R' F'
+case 299 (ll_index 211999898537467): SOLVED, depth 2, 20 moves
+  via: invert RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U L' U R U' L U' R' U' R U' R' U' R U2 R' U' R U' R'
+case 307 (ll_index 623586614513147): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' U R' U2 R U R' U R
+case 315 (ll_index 423505563028987): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  R U2 R D R' U2 R D' R2 U' R' U2 R U R' U R
+case 323 (ll_index 417642932669947): SOLVED, depth 2, 16 moves
+  via: invert mirror R2D'RU2R'DRU2R + RUR'URU2R'
+  R U2 R D R' U2 R D' R2 R U R' U R U2 R'
+case 331 (ll_index 217712205041147): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  U R' U2 R U R' U R U R U2 R D R' U2 R D' R2
+case 339 (ll_index 612913620782587): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  U2 R U R' U R U2 R' R U2 R D R' U2 R D' R2
+case 347 (ll_index 222973663163571): SOLVED, depth 2, 21 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + RUR'URU2R'
+  U R U R2 F' R U R U' R' F R U' R' R U R' U R U2 R'
+case 355 (ll_index 812844471596211): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  R U R' U R U L' U R' U' L U2 R' U' R U' R' U2 R
+case 363 (ll_index 807583136658611): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + invert RUR'URU2R'
+  R' U' R U' R' U' L U' R U L' U' R U2 R' U' R U' R'
+case 371 (ll_index 607051113608371): SOLVED, depth 2, 20 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + invert mirror RUR'URU2R'
+  R' U' R B R' U' R U R B' R2 U R R' U2 R U R' U R
+case 379 (ll_index 406970062124211): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + invert RUR'URU2R'
+  R U R' U R U L' U R' U' L U' R U2 R' U' R U' R'
+case 387 (ll_index 818556778099891): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + RUR'URUL'UR'U'L
+  R U2 R' U' R U' R' U2 R U R' U R U L' U R' U' L
+case 395 (ll_index 212000021722291): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  R' U' R U' R' U' L U' R U L' U2 R' U' R U' R' U2 R
+case 403 (ll_index 623586737697971): SOLVED, depth 2, 19 moves
+  via: invert R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  R' U2 R' D' R U2 R' D R2 U2 R' U2 R' D' R U2 R' D R2
+case 411 (ll_index 423505686213811): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + R2D'RU2R'DRU2R
+  U R U R' U R U2 R' U' R2 D' R U2 R' D R U2 R
+case 419 (ll_index 417643055854771): SOLVED, depth 2, 17 moves
+  via: R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U2 R2 D' R U2 R' D R U2 R R' U2 R U R' U R
+case 427 (ll_index 217712328225971): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + RUR'URU2R'
+  U2 R2 D' R U2 R' D R U2 R U R U R' U R U2 R'
+case 435 (ll_index 612913743967411): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + R2D'RU2R'DRU2R
+  R' U2 R U R' U R R2 D' R U2 R' D R U2 R
+case 443 (ll_index 222973663733852): SOLVED, depth 2, 20 moves
+  via: R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U' R2 D' R U2 R' D R U2 R F U' R' U R U F' R' U2 R
+case 451 (ll_index 812844472166492): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U2 R' U2 R' D' R U2 R' D R2 F U' R' U R U F' R' U2 R
+case 459 (ll_index 807583137228892): SOLVED, depth 2, 21 moves
+  via: invert RUR'URU'R'URU2R' + invert mirror R2D'RU2R'DRU2R
+  R U2 R' U' R U R' U' R U' R' U2 R U2 R D R' U2 R D' R2
+case 467 (ll_index 607051114178652): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + mirror RUR'URU'R'URU2R'
+  U R2 D' R U2 R' D R U2 R R' U' R U' R' U R U' R' U2 R
+case 475 (ll_index 406970062694492): SOLVED, depth 2, 20 moves
+  via: RUR'URU2R' + invert mirror RUR'F'RUR'U'R'FR2U'R'
+  R U R' U R U2 R' R' U' R2 B R' U' R' U R B' R' U R
+case 483 (ll_index 818556778670172): SOLVED, depth 2, 22 moves
+  via: invert R'U2RFU'R'U'RUF' + invert mirror RUR'URUL'UR'U'L
+  F U' R' U R U F' R' U2 R U2 L U' R' U L' U R U R' U R
+case 491 (ll_index 212000022292572): SOLVED, depth 2, 22 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + RUR'URU2R'
+  U' R' U' R B R' U' R U R B' R2 U R U' R U R' U R U2 R'
+case 499 (ll_index 623586738268252): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U2 F R U' R' U' R U2 R' U' F' U R' U2 R U R' U R
+case 507 (ll_index 423505686784092): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + mirror R2D'RU2R'DRU2R
+  R' U2 R F U' R' U' R U F' R2 D R' U2 R D' R' U2 R'
+case 515 (ll_index 417643056425052): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  U R' U2 R U R' U R U' F R U' R' U' R U2 R' U' F'
+case 523 (ll_index 217712328796252): SOLVED, depth 2, 21 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + RUR'URU2R'
+  R U R2 F' R U R U' R' F R U' R' U2 R U R' U R U2 R'
+case 531 (ll_index 612913744537692): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + RUR'URU2R'
+  U2 F R U' R' U' R U2 R' U' F' U2 R U R' U R U2 R'
+case 539 (ll_index 222973539408466): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  R' U2 R U R' U R U2 R2 D R' U2 R D' R' U2 R'
+case 547 (ll_index 812844347841106): SOLVED, depth 2, 17 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  R2 D R' U2 R D' R' U2 R' U' R' U2 R U R' U R
+case 555 (ll_index 807583012903506): SOLVED, depth 2, 16 moves
+  via: mirror R2D'RU2R'DRU2R + RUR'URU2R'
+  R2 D R' U2 R D' R' U2 R' R U R' U R U2 R'
+case 563 (ll_index 607050989853266): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + invert R2D'RU2R'DRU2R
+  U R' U2 R U R' U R R' U2 R' D' R U2 R' D R2
+case 571 (ll_index 406969938369106): SOLVED, depth 2, 20 moves
+  via: invert RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U2 L' U R U' L U' R' U' R U' R' U R U2 R' U' R U' R'
+case 579 (ll_index 818556654344786): SOLVED, depth 2, 19 moves
+  via: RwU'Rw'U'RwURw'F'UF + invert R'U'R'FRF'UR
+  U2 r U' r' U' r U r' F' U F R' U' F R' F' R U R
+case 587 (ll_index 211999897967186): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + RUR'URUL'UR'U'L
+  R U2 R' U' R U' R' R U R' U R U L' U R' U' L
+case 595 (ll_index 623586613942866): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + mirror R2D'RU2R'DRU2R
+  U2 R' U2 R' D' R U2 R' D R2 U' R2 D R' U2 R D' R' U2 R'
+case 603 (ll_index 423505562458706): SOLVED, depth 2, 20 moves
+  via: RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U2 R U R' U R U L' U R' U' L U2 R U2 R' U' R U' R'
+case 611 (ll_index 417642932099666): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  U2 R' U' R U' R' U2 R U2 L U' R' U L' U R U R' U R
+case 619 (ll_index 217712204470866): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U2 R2 D R' U2 R D' R' U2 R' R' U2 R F U' R' U' R U F'
+case 627 (ll_index 612913620212306): SOLVED, depth 2, 21 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + invert mirror RUR'URU2R'
+  U' R U R2 F' R U R U' R' F R U' R' R' U2 R U R' U R
+case 635 (ll_index 222973415090907): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + R'U2RFU'R'U'RUF'
+  U R U R' U R U2 R' U' R' U2 R F U' R' U' R U F'
+case 643 (ll_index 812844223523547): SOLVED, depth 2, 21 moves
+  via: RUR'URUL'UR'U'L + R2D'RU2R'DRU2R
+  U R U R' U R U L' U R' U' L R2 D' R U2 R' D R U2 R
+case 651 (ll_index 807582888585947): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URUL'UR'U'L + R2D'RU2R'DRU2R
+  U R' U' R U' R' U' L U' R U L' R2 D' R U2 R' D R U2 R
+case 659 (ll_index 607050865535707): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + RUR'URU2R'
+  U F U' R' U R U F' R' U2 R U2 R U R' U R U2 R'
+case 667 (ll_index 406969814051547): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + R'U2RFU'R'U'RUF'
+  R' U2 R U R' U R R' U2 R F U' R' U' R U F'
+case 675 (ll_index 818556530027227): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  U F U' R' U R U F' R' U2 R U R' U2 R U R' U R
+case 683 (ll_index 211999773649627): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + RUR'URU2R'
+  U2 R' U2 R F U' R' U' R U F' U' R U R' U R U2 R'
+case 691 (ll_index 623586489625307): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  U R U R' U R U2 R' U2 F U' R' U R U F' R' U2 R
+case 699 (ll_index 423505438141147): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert FURU2R'URUR'F'
+  U' R U2 R D R' U2 R D' R2 U' F R U' R' U' R U2 R' U' F'
+case 707 (ll_index 417642807782107): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + FURU2R'URUR'F'
+  U R2 D R' U2 R D' R' U2 R' F U R U2 R' U R U R' F'
+case 715 (ll_index 217712080153307): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  R' U2 R U R' U R U' F U' R' U R U F' R' U2 R
+case 723 (ll_index 612913495894747): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  U2 R' U2 R F U' R' U' R U F' U2 R' U2 R U R' U R
+case 731 (ll_index 807432605214718): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU'R'URU2R'
+  R' U2 R U R' U R U' R U2 R' U' R U R' U' R U' R'
+case 739 (ll_index 418093819832318): SOLVED, depth 1, 12 moves
+  via: invert mirror RUR'UR'U'R2U'R2U2R
+  U R U2 R2 U' R2 U' R' U R' U R
+case 747 (ll_index 612462564812798): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + RUR'URU'R'URU2R'
+  R' U2 R U R' U R R U R' U R U' R' U R U2 R'
+case 755 (ll_index 223123779430398): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + invert mirror RUR'URU2R'
+  U' R U R' U R U2 R' U R' U2 R U R' U R
+case 763 (ll_index 212150137989118): SOLVED, depth 2, 20 moves
+  via: RUR'URU'R'URU2R' + RUR'URU2R'
+  U2 R U R' U R U' R' U R U2 R' U' R U R' U R U2 R'
+case 771 (ll_index 423204830914558): SOLVED, depth 1, 7 moves
+  via: mirror RUR'URU2R'
+  R' U' R U' R' U2 R
+case 779 (ll_index 813144911718398): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert mirror RUR'URU'R'URU2R'
+  R' U2 R U R' U R U' R' U2 R U R' U' R U R' U R
+case 787 (ll_index 818406246655998): SOLVED, depth 1, 8 moves
+  via: invert RUR'URU2R'
+  U R U2 R' U' R U' R'
+case 795 (ll_index 406819530680318): SOLVED, depth 2, 20 moves
+  via: invert RUR'URU'R'URU2R' + RUR'URU2R'
+  U' R U2 R' U' R U R' U' R U' R' U2 R U R' U R U2 R'
+case 803 (ll_index 607351553730558): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert mirror RUR'URU'R'URU2R'
+  R' U2 R U R' U R U R' U2 R U R' U' R U R' U R
+case 811 (ll_index 217411472926718): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URU'R'URU2R'
+  R' U2 R U R' U R U2 R' U' R U' R' U R U' R' U2 R
+case 819 (ll_index 623736853964798): SOLVED, depth 2, 19 moves
+  via: RUR'URU'R'URU2R' + RUR'URU2R'
+  R U R' U R U' R' U R U2 R' U R U R' U R U2 R'
+case 827 (ll_index 222973487463642): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + FURU2R'URUR'F'
+  R2 D R' U2 R D' R' U2 R' U' F U R U2 R' U R U R' F'
+case 835 (ll_index 812844295896282): SOLVED, depth 2, 21 moves
+  via: invert mirror RUR'URU'R'URU2R' + invert R2D'RU2R'DRU2R
+  U2 R' U2 R U R' U' R U R' U R R' U2 R' D' R U2 R' D R2
+case 843 (ll_index 807582960958682): SOLVED, depth 2, 20 moves
+  via: R'U2RFU'R'U'RUF' + invert R2D'RU2R'DRU2R
+  U' R' U2 R F U' R' U' R U F' R' U2 R' D' R U2 R' D R2
+case 851 (ll_index 607050937908442): SOLVED, depth 2, 20 moves
+  via: R'U2RFU'R'U'RUF' + R2D'RU2R'DRU2R
+  U2 R' U2 R F U' R' U' R U F' R2 D' R U2 R' D R U2 R
+case 859 (ll_index 406969886424282): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU2R' + invert RUR'F'RUR'U'R'FR2U'R'
+  R' U' R U' R' U2 R R U R2 F' R U R U' R' F R U' R'
+case 867 (ll_index 818556602399962): SOLVED, depth 2, 23 moves
+  via: RUR'URUL'UR'U'L + invert R'U2RFU'R'U'RUF'
+  U' R U R' U R U L' U R' U' L U F U' R' U R U F' R' U2 R
+case 875 (ll_index 211999846022362): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + invert RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' U2 R U2 R' U' R U' R'
+case 883 (ll_index 623586561998042): SOLVED, depth 2, 22 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + mirror RUR'URU2R'
+  U2 R U R2 F' R U R U' R' F R U' R' U2 R' U' R U' R' U2 R
+case 891 (ll_index 423505510513882): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U2 R U2 R D R' U2 R D' R2 F U' R' U R U F' R' U2 R
+case 899 (ll_index 417642880154842): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + mirror RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' U R' U' R U' R' U2 R
+case 907 (ll_index 217712152526042): SOLVED, depth 2, 22 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + invert RUR'URU2R'
+  U2 R U R2 F' R U R U' R' F R U' R' U' R U2 R' U' R U' R'
+case 915 (ll_index 612913568267482): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + FURU2R'URUR'F'
+  U2 R U2 R' U' R U' R' U2 F U R U2 R' U R U R' F'
+case 923 (ll_index 222973455716956): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + RUR'URU2R'
+  R' U' R U' R' U' L U' R U L' U2 R U R' U R U2 R'
+case 931 (ll_index 812844264149596): SOLVED, depth 2, 21 moves
+  via: invert mirror RUR'F'RUR'U'R'FR2U'R' + mirror RUR'URU2R'
+  U' R' U' R2 B R' U' R' U R B' R' U R R' U' R U' R' U2 R
+case 939 (ll_index 807582929211996): SOLVED, depth 2, 20 moves
+  via: RUR'F'RUR'U'R'FR2U'R' + invert RUR'URU2R'
+  R U R' F' R U R' U' R' F R2 U' R' R U2 R' U' R U' R'
+case 947 (ll_index 607050906161756): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  R U R' U R U L' U R' U' L U R' U2 R U R' U R
+case 955 (ll_index 406969854677596): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + mirror RUR'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U2 R' U' R U' R' U2 R
+case 963 (ll_index 818556570653276): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URUL'UR'U'L
+  R' U2 R U R' U R U2 R' U' R U' R' U' L U' R U L'
+case 971 (ll_index 211999814275676): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  U2 R' U' R U' R' U2 R U' F R U' R' U' R U2 R' U' F'
+case 979 (ll_index 623586530251356): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + RUR'URU2R'
+  R U R' U R U L' U R' U' L U2 R U R' U R U2 R'
+case 987 (ll_index 423505478767196): SOLVED, depth 2, 16 moves
+  via: invert RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  R U2 R' U' R U' R' R2 D R' U2 R D' R' U2 R'
+case 995 (ll_index 417642848408156): SOLVED, depth 2, 18 moves
+  via: mirror R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U2 R2 D R' U2 R D' R' U2 R' U' R' U' R U' R' U2 R
+case 1003 (ll_index 217712120779356): SOLVED, depth 2, 17 moves
+  via: mirror R2D'RU2R'DRU2R + invert RUR'URU2R'
+  U2 R2 D R' U2 R D' R' U2 R' R U2 R' U' R U' R'
+case 1011 (ll_index 612913536520796): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  U' R' U' R U' R' U2 R U R2 D R' U2 R D' R' U2 R'
+case 1019 (ll_index 222973455576557): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'F'RUR'U'R'FR2U'R'
+  R' U' R U' R' U2 R R' U' R2 B R' U' R' U R B' R' U R
+case 1027 (ll_index 812844264009197): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  U R2 D' R U2 R' D R U2 R R U2 R' U' R U R' U' R U' R'
+case 1035 (ll_index 807582929071597): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URUL'UR'U'L
+  U' R' U2 R U R' U R U2 L' U R U' L U' R' U' R U' R'
+case 1043 (ll_index 607050906021357): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  R U R' U R U2 R' U L U' R' U L' U R U R' U R
+case 1051 (ll_index 406969854537197): SOLVED, depth 2, 20 moves
+  via: invert RUR'URUL'UR'U'L + RUR'URU2R'
+  U' L' U R U' L U' R' U' R U' R' U2 R U R' U R U2 R'
+case 1059 (ll_index 818556570512877): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + invert RUR'URUL'UR'U'L
+  R U R' U R U2 R' U L' U R U' L U' R' U' R U' R'
+case 1067 (ll_index 211999814135277): SOLVED, depth 2, 20 moves
+  via: RUR'UR'U'R2U'R2U2R + invert R2D'RU2R'DRU2R
+  R U R' U R' U' R2 U' R2 U2 R R' U2 R' D' R U2 R' D R2
+case 1075 (ll_index 623586530110957): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  U' L U' R' U L' U R U R' U R U R' U2 R U R' U R
+case 1083 (ll_index 423505478626797): SOLVED, depth 2, 17 moves
+  via: mirror RUR'URU2R' + invert R2D'RU2R'DRU2R
+  U2 R' U' R U' R' U2 R R' U2 R' D' R U2 R' D R2
+case 1091 (ll_index 417642848267757): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert R2D'RU2R'DRU2R
+  U' R U2 R' U' R U' R' U' R' U2 R' D' R U2 R' D R2
+case 1099 (ll_index 217712120638957): SOLVED, depth 2, 16 moves
+  via: invert R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  R' U2 R' D' R U2 R' D R2 R' U' R U' R' U2 R
+case 1107 (ll_index 612913536380397): SOLVED, depth 2, 17 moves
+  via: invert R2D'RU2R'DRU2R + invert RUR'URU2R'
+  R' U2 R' D' R U2 R' D R2 U R U2 R' U' R U' R'
+case 1115 (ll_index 222973383053421): SOLVED, depth 2, 17 moves
+  via: R2D'RU2R'DRU2R + invert RUR'URU2R'
+  R2 D' R U2 R' D R U2 R U R U2 R' U' R U' R'
+case 1123 (ll_index 812844191486061): SOLVED, depth 2, 17 moves
+  via: invert RUR'URU2R' + R2D'RU2R'DRU2R
+  R U2 R' U' R U' R' U2 R2 D' R U2 R' D R U2 R
+case 1131 (ll_index 807582856548461): SOLVED, depth 2, 17 moves
+  via: invert RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  U' R U2 R' U' R U' R' R U2 R D R' U2 R D' R2
+case 1139 (ll_index 607050833498221): SOLVED, depth 2, 16 moves
+  via: R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  R2 D' R U2 R' D R U2 R R' U' R U' R' U2 R
+case 1147 (ll_index 406969782014061): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  U2 L U' R' U L' U R U R' U R U' R' U2 R U R' U R
+case 1155 (ll_index 818556497989741): SOLVED, depth 2, 19 moves
+  via: R'U'R'FRF'UR + invert RwU'Rw'U'RwURw'F'UF
+  U R' U' R' F R F' U R F' U' F r U' r' U r U r'
+case 1163 (ll_index 211999741612141): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + R2D'RU2R'DRU2R
+  U2 R U2 R D R' U2 R D' R2 U R2 D' R U2 R' D R U2 R
+case 1171 (ll_index 623586457587821): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URUL'UR'U'L
+  R' U2 R U R' U R R' U' R U' R' U' L U' R U L'
+case 1179 (ll_index 423505406103661): SOLVED, depth 2, 20 moves
+  via: invert R'U2RFU'R'U'RUF' + invert mirror R2D'RU2R'DRU2R
+  U2 F U' R' U R U F' R' U2 R R U2 R D R' U2 R D' R2
+case 1187 (ll_index 417642775744621): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU2R' + RUR'F'RUR'U'R'FR2U'R'
+  R' U' R U' R' U2 R R U R' F' R U R' U' R' F R2 U' R'
+case 1195 (ll_index 217712048115821): SOLVED, depth 2, 20 moves
+  via: RUR'URU2R' + invert RUR'URUL'UR'U'L
+  U2 R U R' U R U2 R' U2 L' U R U' L U' R' U' R U' R'
+case 1203 (ll_index 612913463857261): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  U2 R' U' R U' R' U' L U' R U L' U2 R' U2 R U R' U R
+case 1211 (ll_index 222973310534842): SOLVED, depth 2, 21 moves
+  via: FURU2R'URUR'F' + mirror R2D'RU2R'DRU2R
+  U' F U R U2 R' U R U R' F' U R2 D R' U2 R D' R' U2 R'
+case 1219 (ll_index 812844118967482): SOLVED, depth 2, 20 moves
+  via: invert FURU2R'URUR'F' + invert mirror R2D'RU2R'DRU2R
+  U2 F R U' R' U' R U2 R' U' F' R U2 R D R' U2 R D' R2
+case 1227 (ll_index 807582784029882): SOLVED, depth 2, 18 moves
+  via: R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  R' U2 R F U' R' U' R U F' U R' U' R U' R' U2 R
+case 1235 (ll_index 607050760979642): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  U' R' U' R U' R' U2 R U2 F U' R' U R U F' R' U2 R
+case 1243 (ll_index 406969709495482): SOLVED, depth 2, 18 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  U' F U' R' U R U F' R' U2 R R' U' R U' R' U2 R
+case 1251 (ll_index 818556425471162): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + R'U2RFU'R'U'RUF'
+  U' R' U' R U' R' U2 R U' R' U2 R F U' R' U' R U F'
+case 1259 (ll_index 211999669093562): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  R U2 R' U' R U' R' U F U' R' U R U F' R' U2 R
+case 1267 (ll_index 623586385069242): SOLVED, depth 2, 18 moves
+  via: R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  R' U2 R F U' R' U' R U F' U2 R U2 R' U' R U' R'
+case 1275 (ll_index 423505333585082): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  U' F U' R' U R U F' R' U2 R U R U2 R' U' R U' R'
+case 1283 (ll_index 417642703226042): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert RUR'URUL'UR'U'L
+  U2 R' U2 R' D' R U2 R' D R2 L' U R U' L U' R' U' R U' R'
+case 1291 (ll_index 217711975597242): SOLVED, depth 2, 21 moves
+  via: invert mirror RUR'UR'U'R2U'R2U2R + R'U2RFU'R'U'RUF'
+  R U2 R2 U' R2 U' R' U R' U R R' U2 R F U' R' U' R U F'
+case 1299 (ll_index 612913391338682): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + R'U2RFU'R'U'RUF'
+  R U2 R' U' R U' R' U2 R' U2 R F U' R' U' R U F'
+case 1307 (ll_index 807432605213638): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU'R'URU2R' + mirror RUR'URU2R'
+  R' U2 R U R' U' R U R' U R U' R' U' R U' R' U2 R
+case 1315 (ll_index 418093819831238): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU'R'URU2R' + invert RUR'URU2R'
+  R U2 R' U' R U R' U' R U' R' R U2 R' U' R U' R'
+case 1323 (ll_index 612462564811718): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URU2R'
+  U R' U2 R U R' U R U2 R' U' R U' R' U2 R
+case 1331 (ll_index 223123779429318): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + invert RUR'URU2R'
+  U2 R U R' U R U2 R' U2 R U2 R' U' R U' R'
+case 1339 (ll_index 212150137988038): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU'R'URU2R'
+  U' R' U2 R U R' U R R U2 R' U' R U R' U' R U' R'
+case 1347 (ll_index 423204830913478): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + mirror RUR'URU2R'
+  U2 R U R' U R U2 R' U R' U' R U' R' U2 R
+case 1355 (ll_index 813144911717318): SOLVED, depth 2, 16 moves
+  via: mirror RUR'URU2R' + RUR'URU2R'
+  U R' U' R U' R' U2 R U' R U R' U R U2 R'
+case 1363 (ll_index 818406246654918): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URU'R'URU2R'
+  R U2 R' U' R U' R' R' U2 R U R' U' R U R' U R
+case 1371 (ll_index 406819530679238): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU2R'
+  U R' U2 R U R' U R U' R U2 R' U' R U' R'
+case 1379 (ll_index 607351553729478): SOLVED, depth 2, 19 moves
+  via: RUR'URU'R'URU2R' + mirror RUR'URU2R'
+  U' R U R' U R U' R' U R U2 R' R' U' R U' R' U2 R
+case 1387 (ll_index 217411472925638): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU'R'URU2R' + RUR'URU2R'
+  R' U' R U' R' U R U' R' U2 R R U R' U R U2 R'
+case 1395 (ll_index 623736853963718): SOLVED, depth 2, 16 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URU2R'
+  U2 R U2 R' U' R U' R' U R' U2 R U R' U R
+case 1403 (ll_index 222973487462562): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U R U R' U R U L' U R' U' L R U2 R' U' R U' R'
+case 1411 (ll_index 812844295895202): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  U2 R' U2 R' D' R U2 R' D R2 R' U2 R U R' U' R U R' U R
+case 1419 (ll_index 807582960957602): SOLVED, depth 2, 22 moves
+  via: invert FURU2R'URUR'F' + R'U2RFU'R'U'RUF'
+  U2 F R U' R' U' R U2 R' U' F' U' R' U2 R F U' R' U' R U F'
+case 1427 (ll_index 607050937907362): SOLVED, depth 2, 22 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  U2 R' U2 R' D' R U2 R' D R2 U2 R' U2 R U R' U' R U R' U R
+case 1435 (ll_index 406969886423202): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + RUR'URUL'UR'U'L
+  U' R' U' R U' R' U2 R R U R' U R U L' U R' U' L
+case 1443 (ll_index 818556602398882): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + mirror RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' U2 R' U' R U' R' U2 R
+case 1451 (ll_index 211999846021282): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U R' U' R U' R' U' L U' R U L' R U2 R' U' R U' R'
+case 1459 (ll_index 623586561996962): SOLVED, depth 2, 22 moves
+  via: mirror RUR'UR'U'R2U'R2U2R + R2D'RU2R'DRU2R
+  U R' U' R U' R U R2 U R2 U2 R' U2 R2 D' R U2 R' D R U2 R
+case 1467 (ll_index 423505510512802): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + mirror RUR'URUL'UR'U'L
+  U' R' U' R U' R' U2 R R' U' R U' R' U' L U' R U L'
+case 1475 (ll_index 417642880153762): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U' R2 D' R U2 R' D R U2 R U' R' U2 R U R' U R
+case 1483 (ll_index 217712152524962): SOLVED, depth 1, 10 moves
+  via: invert FURU2R'URUR'F'
+  F R U' R' U' R U2 R' U' F'
+case 1491 (ll_index 612913568266402): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  U2 R' U2 R' D' R U2 R' D R2 R U2 R' U' R U R' U' R U' R'
+case 1499 (ll_index 222973455720236): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + R2D'RU2R'DRU2R
+  U R U2 R' U' R U' R' U' R2 D' R U2 R' D R U2 R
+case 1507 (ll_index 812844264152876): SOLVED, depth 2, 22 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URUL'UR'U'L
+  U2 R' U2 R' D' R U2 R' D R2 U' R U R' U R U L' U R' U' L
+case 1515 (ll_index 807582929215276): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U2 R2 D' R U2 R' D R U2 R U' R' U' R U' R' U2 R
+case 1523 (ll_index 607050906165036): SOLVED, depth 2, 16 moves
+  via: mirror RUR'URU2R' + R2D'RU2R'DRU2R
+  R' U' R U' R' U2 R R2 D' R U2 R' D R U2 R
+case 1531 (ll_index 406969854680876): SOLVED, depth 2, 23 moves
+  via: invert FURU2R'URUR'F' + mirror RUR'URU'R'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U' R' U' R U' R' U R U' R' U2 R
+case 1539 (ll_index 818556570656556): SOLVED, depth 2, 18 moves
+  via: RUR'URUL'UR'U'L + RUR'URU2R'
+  R U R' U R U L' U R' U' L R U R' U R U2 R'
+case 1547 (ll_index 211999814278956): SOLVED, depth 2, 23 moves
+  via: invert FURU2R'URUR'F' + mirror RUR'URU'R'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U R' U' R U' R' U R U' R' U2 R
+case 1555 (ll_index 623586530254636): SOLVED, depth 1, 10 moves
+  via: invert R2D'RU2R'DRU2R
+  U R' U2 R' D' R U2 R' D R2
+case 1563 (ll_index 423505478770476): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  R U R' U R U L' U R' U' L U' R' U2 R U R' U R
+case 1571 (ll_index 417642848411436): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URUL'UR'U'L + RUR'URU2R'
+  R' U' R U' R' U' L U' R U L' R U R' U R U2 R'
+case 1579 (ll_index 217712120782636): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + FURU2R'URUR'F'
+  R' U2 R U R' U R U' F U R U2 R' U R U R' F'
+case 1587 (ll_index 612913536524076): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URUL'UR'U'L
+  U' R' U2 R U R' U R U' R' U' R U' R' U' L U' R U L'
+case 1595 (ll_index 222973455575472): SOLVED, depth 2, 18 moves
+  via: mirror R2D'RU2R'DRU2R + RUR'URU2R'
+  U R2 D R' U2 R D' R' U2 R' U R U R' U R U2 R'
+case 1603 (ll_index 812844264008112): SOLVED, depth 2, 22 moves
+  via: invert mirror R2D'RU2R'DRU2R + mirror RUR'URUL'UR'U'L
+  U R U2 R D R' U2 R D' R2 U R' U' R U' R' U' L U' R U L'
+case 1611 (ll_index 807582929070512): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  U2 R' U2 R U R' U R U R2 D R' U2 R D' R' U2 R'
+case 1619 (ll_index 607050906020272): SOLVED, depth 2, 17 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U R2 D R' U2 R D' R' U2 R' R' U2 R U R' U R
+case 1627 (ll_index 406969854536112): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  U' R' U' R U' R' U' L U' R U L' R' U' R U' R' U2 R
+case 1635 (ll_index 818556570511792): SOLVED, depth 2, 18 moves
+  via: invert R'U'R'FRF'UR + RUR'U'R'FRF'
+  U' R' U' F R' F' R U R U R U R' U' R' F R F'
+case 1643 (ll_index 211999814134192): SOLVED, depth 1, 10 moves
+  via: invert mirror R2D'RU2R'DRU2R
+  U2 R U2 R D R' U2 R D' R2
+case 1651 (ll_index 623586530109872): SOLVED, depth 2, 24 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + invert R'U2RFU'R'U'RUF'
+  U R' U' R B R' U' R U R B' R2 U R F U' R' U R U F' R' U2 R
+case 1659 (ll_index 423505478625712): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U' R' U' R U' R' U' L U' R U L' U R U2 R' U' R U' R'
+case 1667 (ll_index 417642848266672): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + RUR'URUL'UR'U'L
+  R U2 R' U' R U' R' U R U R' U R U L' U R' U' L
+case 1675 (ll_index 217712120637872): SOLVED, depth 2, 22 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URUL'UR'U'L
+  U' R U2 R D R' U2 R D' R2 U' L U' R' U L' U R U R' U R
+case 1683 (ll_index 612913536379312): SOLVED, depth 2, 19 moves
+  via: RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  U' R U R' U R U L' U R' U' L R' U' R U' R' U2 R
+case 1691 (ll_index 222973383052346): SOLVED, depth 2, 21 moves
+  via: mirror R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U2 R2 D R' U2 R D' R' U2 R' U F U' R' U R U F' R' U2 R
+case 1699 (ll_index 812844191484986): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  U R U2 R D R' U2 R D' R2 R U2 R' U' R U R' U' R U' R'
+case 1707 (ll_index 807582856547386): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  U2 R' U' R U' R' U' L U' R U L' R' U2 R U R' U R
+case 1715 (ll_index 607050833497146): SOLVED, depth 2, 22 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  U R U2 R D R' U2 R D' R2 U2 R U2 R' U' R U R' U' R U' R'
+case 1723 (ll_index 406969782012986): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URU2R' + RUR'URUL'UR'U'L
+  U' R' U2 R U R' U R U R U R' U R U L' U R' U' L
+case 1731 (ll_index 818556497988666): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + mirror RUR'URUL'UR'U'L
+  R U R' U R U2 R' R' U' R U' R' U' L U' R U L'
+case 1739 (ll_index 211999741611066): SOLVED, depth 2, 21 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror RUR'UR'U'R2U'R2U2R
+  R2 D R' U2 R D' R' U2 R' U R U2 R2 U' R2 U' R' U R' U R
+case 1747 (ll_index 623586457586746): SOLVED, depth 2, 17 moves
+  via: invert R'U'R'FRF'UR + RUR'U'R'FRF'
+  R' U' F R' F' R U R U' R U R' U' R' F R F'
+case 1755 (ll_index 423505406102586): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + RUR'URUL'UR'U'L
+  R U R' U R U2 R' R U R' U R U L' U R' U' L
+case 1763 (ll_index 417642775743546): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  U R U2 R D R' U2 R D' R2 R' U2 R U R' U' R U R' U R
+case 1771 (ll_index 217712048114746): SOLVED, depth 2, 16 moves
+  via: mirror R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  R2 D R' U2 R D' R' U2 R' R' U' R U' R' U2 R
+case 1779 (ll_index 612913463856186): SOLVED, depth 2, 17 moves
+  via: mirror R2D'RU2R'DRU2R + invert RUR'URU2R'
+  R2 D R' U2 R D' R' U2 R' U R U2 R' U' R U' R'
+case 1787 (ll_index 222973310533762): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  U2 R' U2 R F U' R' U' R U F' U' R U2 R' U' R U' R'
+case 1795 (ll_index 812844118966402): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  U F U' R' U R U F' R' U2 R U R' U' R U' R' U2 R
+case 1803 (ll_index 807582784028802): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  U' R U R' U R U2 R' U F U' R' U R U F' R' U2 R
+case 1811 (ll_index 607050760978562): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + R'U2RFU'R'U'RUF'
+  U2 R' U2 R U R' U R U' R' U2 R F U' R' U' R U F'
+case 1819 (ll_index 406969709494402): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  U F U' R' U R U F' R' U2 R U2 R U2 R' U' R U' R'
+case 1827 (ll_index 818556425470082): SOLVED, depth 2, 23 moves
+  via: invert RUR'URUL'UR'U'L + FURU2R'URUR'F'
+  U L' U R U' L U' R' U' R U' R' U' F U R U2 R' U R U R' F'
+case 1835 (ll_index 211999669092482): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  R' U' R U' R' U2 R U' F U' R' U R U F' R' U2 R
+case 1843 (ll_index 623586385068162): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  U' R' U2 R F U' R' U' R U F' U R' U2 R U R' U R
+case 1851 (ll_index 423505333584002): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + RUR'URU2R'
+  U' R' U2 R F U' R' U' R U F' U2 R U R' U R U2 R'
+case 1859 (ll_index 417642703224962): SOLVED, depth 2, 17 moves
+  via: mirror RUR'URU2R' + R'U2RFU'R'U'RUF'
+  R' U' R U' R' U2 R R' U2 R F U' R' U' R U F'
+case 1867 (ll_index 217711975596162): SOLVED, depth 2, 22 moves
+  via: invert RUR'UR'U'R2U'R2U2R + invert R'U2RFU'R'U'RUF'
+  U2 R' U2 R2 U R2 U R U' R U' R' F U' R' U R U F' R' U2 R
+case 1875 (ll_index 612913391337602): SOLVED, depth 2, 23 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + R2D'RU2R'DRU2R
+  U2 R U R2 F' R U R U' R' F R U' R' R2 D' R U2 R' D R U2 R
+case 1883 (ll_index 807432812418263): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU2R'
+  U R' U2 R U R' U R U2 R U2 R' U' R U' R'
+case 1891 (ll_index 418094027035863): SOLVED, depth 2, 23 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + invert FURU2R'URUR'F'
+  R' U' R B R' U' R U R B' R2 U R F R U' R' U' R U2 R' U' F'
+case 1899 (ll_index 612462772016343): SOLVED, depth 2, 14 moves
+  via: mirror RUR'URU2R' + RUR'URU2R'
+  R' U' R U' R' U2 R R U R' U R U2 R'
+case 1907 (ll_index 223123986633943): SOLVED, depth 2, 15 moves
+  via: RUR'URU2R' + mirror RUR'URU2R'
+  U2 R U R' U R U2 R' R' U' R U' R' U2 R
+case 1915 (ll_index 212150345192663): SOLVED, depth 2, 19 moves
+  via: invert RUR'UR'U'R2U'R2U2R + invert RUR'URU2R'
+  U R' U2 R2 U R2 U R U' R U' R' R U2 R' U' R U' R'
+case 1923 (ll_index 423205038118103): SOLVED, depth 2, 16 moves
+  via: invert RUR'URU2R' + RUR'URU2R'
+  U R U2 R' U' R U' R' U' R U R' U R U2 R'
+case 1931 (ll_index 813145118921943): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert RUR'UR'U'R2U'R2U2R
+  R' U' R U' R' U2 R U' R' U2 R2 U R2 U R U' R U' R'
+case 1939 (ll_index 818406453859543): SOLVED, depth 2, 20 moves
+  via: RUR'URU2R' + invert mirror RUR'UR'U'R2U'R2U2R
+  U2 R U R' U R U2 R' U R U2 R2 U' R2 U' R' U R' U R
+case 1947 (ll_index 406819737883863): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URU2R'
+  U R' U2 R U R' U R U R' U' R U' R' U2 R
+case 1955 (ll_index 607351760934103): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'UR'U'R2U'R2U2R + invert mirror RUR'URU2R'
+  U R U2 R2 U' R2 U' R' U R' U R R' U2 R U R' U R
+case 1963 (ll_index 217411680130263): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + invert RUR'URU2R'
+  U2 R U R' U R U2 R' U R U2 R' U' R U' R'
+case 1971 (ll_index 623737061168343): SOLVED, depth 2, 15 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'URU2R'
+  R' U' R U' R' U2 R U' R' U2 R U R' U R
+case 1979 (ll_index 222973539263707): SOLVED, depth 2, 22 moves
+  via: R2D'RU2R'DRU2R + mirror RUR'F'RUR'U'R'FR2U'R'
+  R2 D' R U2 R' D R U2 R R' U' R B R' U' R U R B' R2 U R
+case 1987 (ll_index 812844347696347): SOLVED, depth 2, 22 moves
+  via: R2D'RU2R'DRU2R + RUR'F'RUR'U'R'FR2U'R'
+  R2 D' R U2 R' D R U2 R R U R' F' R U R' U' R' F R2 U' R'
+case 1995 (ll_index 807583012758747): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'F'RUR'U'R'FR2U'R' + invert mirror R2D'RU2R'DRU2R
+  U R' U' R2 B R' U' R' U R B' R' U R R U2 R D R' U2 R D' R2
+case 2003 (ll_index 607050989708507): SOLVED, depth 2, 23 moves
+  via: mirror RUR'URUL'UR'U'L + R'U2RFU'R'U'RUF'
+  U' R' U' R U' R' U' L U' R U L' U' R' U2 R F U' R' U' R U F'
+case 2011 (ll_index 406969938224347): SOLVED, depth 2, 23 moves
+  via: invert RUR'F'RUR'U'R'FR2U'R' + invert R'U2RFU'R'U'RUF'
+  R U R2 F' R U R U' R' F R U' R' F U' R' U R U F' R' U2 R
+case 2019 (ll_index 818556654200027): SOLVED, depth 2, 23 moves
+  via: RUR'URUL'UR'U'L + R'U2RFU'R'U'RUF'
+  U' R U R' U R U L' U R' U' L U' R' U2 R F U' R' U' R U F'
+case 2027 (ll_index 211999897822427): SOLVED, depth 2, 21 moves
+  via: invert mirror RUR'UR'U'R2U'R2U2R + invert R2D'RU2R'DRU2R
+  U2 R U2 R2 U' R2 U' R' U R' U R R' U2 R' D' R U2 R' D R2
+case 2035 (ll_index 623586613798107): SOLVED, depth 2, 20 moves
+  via: invert RUR'UR'U'R2U'R2U2R + invert mirror R2D'RU2R'DRU2R
+  R' U2 R2 U R2 U R U' R U' R' R U2 R D R' U2 R D' R2
+case 2043 (ll_index 423505562313947): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + RUR'URU2R'
+  U' R2 D' R U2 R' D R U2 R U2 R U R' U R U2 R'
+case 2051 (ll_index 417642931954907): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + R2D'RU2R'DRU2R
+  R U R' U R U2 R' U R2 D' R U2 R' D R U2 R
+case 2059 (ll_index 217712204326107): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  R U2 R D R' U2 R D' R2 U R' U2 R U R' U R
+case 2067 (ll_index 612913620067547): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + RUR'URU2R'
+  R U2 R D R' U2 R D' R2 U2 R U R' U R U2 R'
+case 2075 (ll_index 222973662924861): SOLVED, depth 2, 22 moves
+  via: invert mirror RUR'URUL'UR'U'L + mirror R2D'RU2R'DRU2R
+  U L U' R' U L' U R U R' U R U' R2 D R' U2 R D' R' U2 R'
+case 2083 (ll_index 812844471357501): SOLVED, depth 2, 18 moves
+  via: invert mirror R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U' R U2 R D R' U2 R D' R2 U' R' U' R U' R' U2 R
+case 2091 (ll_index 807583136419901): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert RUR'URU2R'
+  U' R U2 R D R' U2 R D' R2 R U2 R' U' R U' R'
+case 2099 (ll_index 607051113369661): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  U2 R U2 R' U' R U' R' U' R U2 R D R' U2 R D' R2
+case 2107 (ll_index 406970061885501): SOLVED, depth 2, 18 moves
+  via: invert RUR'U'R'FRF' + R'U'R'FRF'UR
+  U2 F R' F' R U R U' R' U' R' U' R' F R F' U R
+case 2115 (ll_index 818556777861181): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  U2 R' U2 R U R' U R L U' R' U L' U R U R' U R
+case 2123 (ll_index 212000021483581): SOLVED, depth 2, 23 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror RUR'F'RUR'U'R'FR2U'R'
+  R' U2 R F U' R' U' R U F' R' U' R2 B R' U' R' U R B' R' U R
+case 2131 (ll_index 623586737459261): SOLVED, depth 1, 10 moves
+  via: mirror R2D'RU2R'DRU2R
+  U2 R2 D R' U2 R D' R' U2 R'
+case 2139 (ll_index 423505685975101): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URUL'UR'U'L
+  U2 R' U2 R U R' U R L' U R U' L U' R' U' R U' R'
+case 2147 (ll_index 417643055616061): SOLVED, depth 2, 20 moves
+  via: RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  U' R U R' U R U2 R' U' L U' R' U L' U R U R' U R
+case 2155 (ll_index 217712327987261): SOLVED, depth 2, 19 moves
+  via: invert RUR'URUL'UR'U'L + RUR'URU2R'
+  L' U R U' L U' R' U' R U' R' U' R U R' U R U2 R'
+case 2163 (ll_index 612913743728701): SOLVED, depth 2, 22 moves
+  via: mirror RUR'URUL'UR'U'L + mirror R2D'RU2R'DRU2R
+  U' R' U' R U' R' U' L U' R U L' U R2 D R' U2 R D' R' U2 R'
+case 2171 (ll_index 222973662780102): SOLVED, depth 2, 24 moves
+  via: invert RUR'URU'R'URU2R' + invert RUR'URUL'UR'U'L
+  U R U2 R' U' R U R' U' R U' R' U2 L' U R U' L U' R' U' R U' R'
+case 2179 (ll_index 812844471212742): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  U' R' U2 R U R' U R R2 D R' U2 R D' R' U2 R'
+case 2187 (ll_index 807583136275142): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  R U R' U R U2 R' U' R2 D R' U2 R D' R' U2 R'
+case 2195 (ll_index 607051113224902): SOLVED, depth 2, 22 moves
+  via: invert RUR'UR'U'R2U'R2U2R + invert FURU2R'URUR'F'
+  R' U2 R2 U R2 U R U' R U' R' U2 F R U' R' U' R U2 R' U' F'
+case 2203 (ll_index 406970061740742): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U2 F R U' R' U' R U2 R' U' F' U' R' U2 R U R' U R
+case 2211 (ll_index 818556777716422): SOLVED, depth 2, 23 moves
+  via: invert RUR'URUL'UR'U'L + R'U2RFU'R'U'RUF'
+  U L' U R U' L U' R' U' R U' R' U R' U2 R F U' R' U' R U F'
+case 2219 (ll_index 212000021338822): SOLVED, depth 2, 18 moves
+  via: RUR'U'R'FRF' + invert R'U'R'FRF'UR
+  U2 R U R' U' R' F R F' U R' U' F R' F' R U R
+case 2227 (ll_index 623586737314502): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  R' U2 R U R' U R F R U' R' U' R U2 R' U' F'
+case 2235 (ll_index 423505685830342): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror RUR'URUL'UR'U'L
+  R2 D R' U2 R D' R' U2 R' L U' R' U L' U R U R' U R
+case 2243 (ll_index 417643055471302): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + invert RUR'URUL'UR'U'L
+  U2 R2 D' R U2 R' D R U2 R L' U R U' L U' R' U' R U' R'
+case 2251 (ll_index 217712327842502): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + invert mirror RUR'URUL'UR'U'L
+  U2 R2 D' R U2 R' D R U2 R L U' R' U L' U R U R' U R
+case 2259 (ll_index 612913743583942): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + invert RUR'URUL'UR'U'L
+  R2 D R' U2 R D' R' U2 R' L' U R U' L U' R' U' R U' R'
+case 2267 (ll_index 222973538455806): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + invert R2D'RU2R'DRU2R
+  R' U2 R U R' U R U R' U2 R' D' R U2 R' D R2
+case 2275 (ll_index 812844346888446): SOLVED, depth 2, 17 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U' R' U2 R' D' R U2 R' D R2 R' U2 R U R' U R
+case 2283 (ll_index 807583011950846): SOLVED, depth 2, 18 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URU2R'
+  U' R' U2 R' D' R U2 R' D R2 U R U R' U R U2 R'
+case 2291 (ll_index 607050988900606): SOLVED, depth 2, 22 moves
+  via: invert RUR'URUL'UR'U'L + R2D'RU2R'DRU2R
+  U L' U R U' L U' R' U' R U' R' U R2 D' R U2 R' D R U2 R
+case 2299 (ll_index 406969937416446): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URU'R'URU2R' + FURU2R'URUR'F'
+  U2 R' U2 R U R' U' R U R' U R U F U R U2 R' U R U R' F'
+case 2307 (ll_index 818556653392126): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert RUR'URUL'UR'U'L
+  R U2 R' U' R U' R' L' U R U' L U' R' U' R U' R'
+case 2315 (ll_index 211999897014526): SOLVED, depth 1, 9 moves
+  via: R2D'RU2R'DRU2R
+  R2 D' R U2 R' D R U2 R
+case 2323 (ll_index 623586612990206): SOLVED, depth 2, 22 moves
+  via: invert mirror RUR'URU'R'URU2R' + FURU2R'URUR'F'
+  R' U2 R U R' U' R U R' U R U' F U R U2 R' U R U R' F'
+case 2331 (ll_index 423505561506046): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU2R' + invert RUR'URUL'UR'U'L
+  U' R' U' R U' R' U2 R U L' U R U' L U' R' U' R U' R'
+case 2339 (ll_index 417642931147006): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  R U2 R' U' R U' R' L U' R' U L' U R U R' U R
+case 2347 (ll_index 217712203518206): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + mirror RUR'URU2R'
+  U F R U' R' U' R U2 R' U' F' U R' U' R U' R' U2 R
+case 2355 (ll_index 612913619259646): SOLVED, depth 2, 20 moves
+  via: invert mirror RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  U2 L U' R' U L' U R U R' U R U R' U' R U' R' U2 R
+case 2363 (ll_index 222973414136067): SOLVED, depth 2, 18 moves
+  via: invert R'U2RFU'R'U'RUF' + RUR'URU2R'
+  U2 F U' R' U R U F' R' U2 R R U R' U R U2 R'
+case 2371 (ll_index 812844222568707): SOLVED, depth 1, 10 moves
+  via: R'U2RFU'R'U'RUF'
+  R' U2 R F U' R' U' R U F'
+case 2379 (ll_index 807582887631107): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  U2 R' U' R U' R' U2 R F U' R' U R U F' R' U2 R
+case 2387 (ll_index 607050864580867): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + R'U2RFU'R'U'RUF'
+  R U R' U R U2 R' U R' U2 R F U' R' U' R U F'
+case 2395 (ll_index 406969813096707): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  R U R' U R U2 R' F U' R' U R U F' R' U2 R
+case 2403 (ll_index 818556529072387): SOLVED, depth 2, 19 moves
+  via: R'U2RFU'R'U'RUF' + RUR'URU2R'
+  U' R' U2 R F U' R' U' R U F' U R U R' U R U2 R'
+case 2411 (ll_index 211999772694787): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  U2 F U' R' U R U F' R' U2 R U' R' U2 R U R' U R
+case 2419 (ll_index 623586488670467): SOLVED, depth 2, 18 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  F U' R' U R U F' R' U2 R U2 R' U' R U' R' U2 R
+case 2427 (ll_index 423505437186307): SOLVED, depth 2, 18 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  U' R' U2 R F U' R' U' R U F' R' U2 R U R' U R
+case 2435 (ll_index 417642806827267): SOLVED, depth 2, 18 moves
+  via: invert R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  F U' R' U R U F' R' U2 R U' R U2 R' U' R U' R'
+case 2443 (ll_index 217712079198467): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + R'U2RFU'R'U'RUF'
+  U' R U2 R' U' R U' R' R' U2 R F U' R' U' R U F'
+case 2451 (ll_index 612913494939907): SOLVED, depth 1, 11 moves
+  via: invert R'U2RFU'R'U'RUF'
+  U' F U' R' U R U F' R' U2 R
+case 2459 (ll_index 807432657965263): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + mirror RUR'URU2R'
+  U' R U R' U R U2 R' U2 R' U' R U' R' U2 R
+case 2467 (ll_index 418093872582863): SOLVED, depth 2, 24 moves
+  via: FURU2R'URUR'F' + invert mirror RUR'F'RUR'U'R'FR2U'R'
+  U F U R U2 R' U R U R' F' R' U' R2 B R' U' R' U R B' R' U R
+case 2475 (ll_index 612462617563343): SOLVED, depth 2, 14 moves
+  via: invert RUR'URU2R' + invert mirror RUR'URU2R'
+  R U2 R' U' R U' R' R' U2 R U R' U R
+case 2483 (ll_index 223123832180943): SOLVED, depth 2, 15 moves
+  via: invert mirror RUR'URU2R' + invert RUR'URU2R'
+  U2 R' U2 R U R' U R R U2 R' U' R U' R'
+case 2491 (ll_index 212150190739663): SOLVED, depth 2, 15 moves
+  via: invert RUR'URU2R' + RUR'URU2R'
+  R U2 R' U' R U' R' U R U R' U R U2 R'
+case 2499 (ll_index 423204883665103): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + RUR'UR'U'R2U'R2U2R
+  U' R U R' U R U2 R' R U R' U R' U' R2 U' R2 U2 R
+case 2507 (ll_index 813144964468943): SOLVED, depth 2, 20 moves
+  via: mirror RUR'UR'U'R2U'R2U2R + invert RUR'URU2R'
+  U R' U' R U' R U R2 U R2 U2 R' U' R U2 R' U' R U' R'
+case 2515 (ll_index 818406299406543): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'UR'U'R2U'R2U2R + invert mirror RUR'URU2R'
+  R U2 R2 U' R2 U' R' U R' U R U2 R' U2 R U R' U R
+case 2523 (ll_index 406819583430863): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + mirror RUR'UR'U'R2U'R2U2R
+  U' R' U' R U' R' U2 R R' U' R U' R U R2 U R2 U2 R'
+case 2531 (ll_index 607351606481103): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + mirror RUR'URU2R'
+  U2 R' U2 R U R' U R U' R' U' R U' R' U2 R
+case 2539 (ll_index 217411525677263): SOLVED, depth 2, 16 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'URU2R'
+  U' R' U' R U' R' U2 R U R' U2 R U R' U R
+case 2547 (ll_index 623736906715343): SOLVED, depth 2, 16 moves
+  via: RUR'URU2R' + invert RUR'URU2R'
+  U' R U R' U R U2 R' U' R U2 R' U' R U' R'
+case 2555 (ll_index 222973332771927): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U R2 D' R U2 R' D R U2 R U2 F U' R' U R U F' R' U2 R
+case 2563 (ll_index 812844141204567): SOLVED, depth 2, 21 moves
+  via: mirror R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U R2 D R' U2 R D' R' U2 R' U' R' U2 R F U' R' U' R U F'
+case 2571 (ll_index 807582806266967): SOLVED, depth 2, 18 moves
+  via: invert FURU2R'URUR'F' + invert RUR'URU2R'
+  F R U' R' U' R U2 R' U' F' U R U2 R' U' R U' R'
+case 2579 (ll_index 607050783216727): SOLVED, depth 2, 22 moves
+  via: invert RUR'UR'U'R2U'R2U2R + FURU2R'URUR'F'
+  R' U2 R2 U R2 U R U' R U' R' U2 F U R U2 R' U R U R' F'
+case 2587 (ll_index 406969731732567): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' U R U R' U R U2 R'
+case 2595 (ll_index 818556447708247): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert R'U2RFU'R'U'RUF'
+  U' L U' R' U L' U R U R' U R U2 F U' R' U R U F' R' U2 R
+case 2603 (ll_index 211999691330647): SOLVED, depth 2, 17 moves
+  via: invert FURU2R'URUR'F' + mirror RUR'URU2R'
+  F R U' R' U' R U2 R' U' F' R' U' R U' R' U2 R
+case 2611 (ll_index 623586407306327): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + FURU2R'URUR'F'
+  R' U2 R U R' U R F U R U2 R' U R U R' F'
+case 2619 (ll_index 423505355822167): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U R2 D' R U2 R' D R U2 R U' R' U2 R F U' R' U' R U F'
+case 2627 (ll_index 417642725463127): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  U2 R' U' R U' R' U2 R F R U' R' U' R U2 R' U' F'
+case 2635 (ll_index 217711997834327): SOLVED, depth 2, 20 moves
+  via: invert R'U2RFU'R'U'RUF' + invert R2D'RU2R'DRU2R
+  F U' R' U R U F' R' U2 R U R' U2 R' D' R U2 R' D R2
+case 2643 (ll_index 612913413575767): SOLVED, depth 2, 18 moves
+  via: FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U2 F U R U2 R' U R U R' F' R' U2 R U R' U R
+case 2651 (ll_index 222973507759001): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URU'R'URU2R' + R2D'RU2R'DRU2R
+  R' U' R U' R' U R U' R' U2 R U2 R2 D' R U2 R' D R U2 R
+case 2659 (ll_index 812844316191641): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U2 R' U2 R U R' U R
+case 2667 (ll_index 807582981254041): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URU'R'URU2R' + R2D'RU2R'DRU2R
+  U2 R' U' R U' R' U R U' R' U2 R R2 D' R U2 R' D R U2 R
+case 2675 (ll_index 607050958203801): SOLVED, depth 2, 22 moves
+  via: invert R'U2RFU'R'U'RUF' + FURU2R'URUR'F'
+  U' F U' R' U R U F' R' U2 R U F U R U2 R' U R U R' F'
+case 2683 (ll_index 406969906719641): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URUL'UR'U'L + RUR'URU2R'
+  L U' R' U L' U R U R' U R U R U R' U R U2 R'
+case 2691 (ll_index 818556622695321): SOLVED, depth 2, 18 moves
+  via: invert RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  L' U R U' L U' R' U' R U' R' R' U2 R U R' U R
+case 2699 (ll_index 211999866317721): SOLVED, depth 2, 21 moves
+  via: RUR'UR'U'R2U'R2U2R + invert R2D'RU2R'DRU2R
+  R U R' U R' U' R2 U' R2 U2 R U R' U2 R' D' R U2 R' D R2
+case 2707 (ll_index 623586582293401): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + RUR'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U' R U R' U R U2 R'
+case 2715 (ll_index 423505530809241): SOLVED, depth 2, 18 moves
+  via: invert R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U R' U2 R' D' R U2 R' D R2 U R' U' R U' R' U2 R
+case 2723 (ll_index 417642900450201): SOLVED, depth 1, 11 moves
+  via: FURU2R'URUR'F'
+  U F U R U2 R' U R U R' F'
+case 2731 (ll_index 217712172821401): SOLVED, depth 2, 21 moves
+  via: RUR'URU'R'URU2R' + R2D'RU2R'DRU2R
+  U2 R U R' U R U' R' U R U2 R' R2 D' R U2 R' D R U2 R
+case 2739 (ll_index 612913588562841): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert mirror RUR'URU2R'
+  L U' R' U L' U R U R' U R R' U2 R U R' U R
+case 2747 (ll_index 222973508327102): SOLVED, depth 2, 24 moves
+  via: RUR'URUL'UR'U'L + RUR'URU'R'URU2R'
+  U' R U R' U R U L' U R' U' L U2 R U R' U R U' R' U R U2 R'
+case 2755 (ll_index 812844316759742): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U2 R U2 R D R' U2 R D' R2 R' U' R U' R' U2 R
+case 2763 (ll_index 807582981822142): SOLVED, depth 2, 16 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URU2R'
+  R' U2 R' D' R U2 R' D R2 R U R' U R U2 R'
+case 2771 (ll_index 607050958771902): SOLVED, depth 2, 22 moves
+  via: FURU2R'URUR'F' + invert mirror RUR'UR'U'R2U'R2U2R
+  F U R U2 R' U R U R' F' U R U2 R2 U' R2 U' R' U R' U R
+case 2779 (ll_index 406969907287742): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + FURU2R'URUR'F'
+  U R' U' R U' R' U2 R U F U R U2 R' U R U R' F'
+case 2787 (ll_index 818556623263422): SOLVED, depth 2, 23 moves
+  via: invert R'U2RFU'R'U'RUF' + RUR'URUL'UR'U'L
+  U F U' R' U R U F' R' U2 R U' R U R' U R U L' U R' U' L
+case 2795 (ll_index 211999866885822): SOLVED, depth 2, 17 moves
+  via: FURU2R'URUR'F' + mirror RUR'URU2R'
+  F U R U2 R' U R U R' F' R' U' R U' R' U2 R
+case 2803 (ll_index 623586582861502): SOLVED, depth 2, 18 moves
+  via: R'U'R'FRF'UR + invert RUR'U'R'FRF'
+  U2 R' U' R' F R F' U R U' F R' F' R U R U' R'
+case 2811 (ll_index 423505531377342): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URUL'UR'U'L + invert R2D'RU2R'DRU2R
+  U2 R' U' R U' R' U' L U' R U L' R' U2 R' D' R U2 R' D R2
+case 2819 (ll_index 417642901018302): SOLVED, depth 2, 20 moves
+  via: RUR'URUL'UR'U'L + invert mirror R2D'RU2R'DRU2R
+  R U R' U R U L' U R' U' L R U2 R D R' U2 R D' R2
+case 2827 (ll_index 217712173389502): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URUL'UR'U'L + invert mirror R2D'RU2R'DRU2R
+  R' U' R U' R' U' L U' R U L' R U2 R D R' U2 R D' R2
+case 2835 (ll_index 612913589130942): SOLVED, depth 2, 21 moves
+  via: RUR'URUL'UR'U'L + invert R2D'RU2R'DRU2R
+  U2 R U R' U R U L' U R' U' L R' U2 R' D' R U2 R' D R2
+case 2843 (ll_index 222973435803966): SOLVED, depth 2, 21 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror R2D'RU2R'DRU2R
+  U R' U2 R F U' R' U' R U F' U' R U2 R D R' U2 R D' R2
+case 2851 (ll_index 812844244236606): SOLVED, depth 2, 20 moves
+  via: RUR'URU'R'URU2R' + mirror R2D'RU2R'DRU2R
+  R U R' U R U' R' U R U2 R' R2 D R' U2 R D' R' U2 R'
+case 2859 (ll_index 807582909299006): SOLVED, depth 2, 18 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'URUL'UR'U'L
+  R' U' R U' R' U2 R L U' R' U L' U R U R' U R
+case 2867 (ll_index 607050886248766): SOLVED, depth 2, 22 moves
+  via: RUR'URU'R'URU2R' + mirror R2D'RU2R'DRU2R
+  U2 R U R' U R U' R' U R U2 R' U2 R2 D R' U2 R D' R' U2 R'
+case 2875 (ll_index 406969834764606): SOLVED, depth 2, 20 moves
+  via: invert RUR'URUL'UR'U'L + mirror RUR'URU2R'
+  U2 L' U R U' L U' R' U' R U' R' U' R' U' R U' R' U2 R
+case 2883 (ll_index 818556550740286): SOLVED, depth 2, 19 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U2 L U' R' U L' U R U R' U R R U2 R' U' R U' R'
+case 2891 (ll_index 211999794362686): SOLVED, depth 2, 17 moves
+  via: invert RUR'U'R'FRF' + R'U'R'FRF'UR
+  F R' F' R U R U' R' U R' U' R' F R F' U R
+case 2899 (ll_index 623586510338366): SOLVED, depth 2, 22 moves
+  via: mirror RUR'UR'U'R2U'R2U2R + invert mirror R2D'RU2R'DRU2R
+  U2 R' U' R U' R U R2 U R2 U2 R' U' R U2 R D R' U2 R D' R2
+case 2907 (ll_index 423505458854206): SOLVED, depth 2, 17 moves
+  via: invert mirror RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  U' R' U2 R U R' U R R U2 R D R' U2 R D' R2
+case 2915 (ll_index 417642828495166): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + invert mirror R2D'RU2R'DRU2R
+  R U R' U R U2 R' U' R U2 R D R' U2 R D' R2
+case 2923 (ll_index 217712100866366): SOLVED, depth 2, 19 moves
+  via: invert RUR'URUL'UR'U'L + invert RUR'URU2R'
+  U2 L' U R U' L U' R' U' R U' R' R U2 R' U' R U' R'
+case 2931 (ll_index 612913516607806): SOLVED, depth 2, 20 moves
+  via: mirror RUR'URU'R'URU2R' + mirror R2D'RU2R'DRU2R
+  R' U' R U' R' U R U' R' U2 R R2 D R' U2 R D' R' U2 R'
+case 2939 (ll_index 222973363285387): SOLVED, depth 2, 22 moves
+  via: RUR'URU'R'URU2R' + R'U2RFU'R'U'RUF'
+  R U R' U R U' R' U R U2 R' U2 R' U2 R F U' R' U' R U F'
+case 2947 (ll_index 812844171718027): SOLVED, depth 2, 21 moves
+  via: mirror R2D'RU2R'DRU2R + invert RUR'URUL'UR'U'L
+  R2 D R' U2 R D' R' U2 R' U' L' U R U' L U' R' U' R U' R'
+case 2955 (ll_index 807582836780427): SOLVED, depth 2, 21 moves
+  via: R2D'RU2R'DRU2R + FURU2R'URUR'F'
+  U' R2 D' R U2 R' D R U2 R U2 F U R U2 R' U R U R' F'
+case 2963 (ll_index 607050813730187): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URUL'UR'U'L + invert R2D'RU2R'DRU2R
+  R' U' R U' R' U' L U' R U L' U' R' U2 R' D' R U2 R' D R2
+case 2971 (ll_index 406969762246027): SOLVED, depth 2, 23 moves
+  via: RUR'URU'R'URU2R' + invert R'U2RFU'R'U'RUF'
+  U2 R U R' U R U' R' U R U2 R' U' F U' R' U R U F' R' U2 R
+case 2979 (ll_index 818556478221707): SOLVED, depth 2, 22 moves
+  via: invert RUR'URU'R'URU2R' + invert R'U2RFU'R'U'RUF'
+  U R U2 R' U' R U R' U' R U' R' F U' R' U R U F' R' U2 R
+case 2987 (ll_index 211999721844107): SOLVED, depth 2, 23 moves
+  via: invert RUR'URU'R'URU2R' + invert R'U2RFU'R'U'RUF'
+  U' R U2 R' U' R U R' U' R U' R' U2 F U' R' U R U F' R' U2 R
+case 2995 (ll_index 623586437819787): SOLVED, depth 2, 19 moves
+  via: R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  R2 D' R U2 R' D R U2 R U2 R' U2 R' D' R U2 R' D R2
+case 3003 (ll_index 423505386335627): SOLVED, depth 2, 21 moves
+  via: invert FURU2R'URUR'F' + invert R2D'RU2R'DRU2R
+  U2 F R U' R' U' R U2 R' U' F' U2 R' U2 R' D' R U2 R' D R2
+case 3011 (ll_index 417642755976587): SOLVED, depth 2, 22 moves
+  via: R'U2RFU'R'U'RUF' + mirror RUR'URU'R'URU2R'
+  U2 R' U2 R F U' R' U' R U F' R' U' R U' R' U R U' R' U2 R
+case 3019 (ll_index 217712028347787): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URU'R'URU2R' + invert R'U2RFU'R'U'RUF'
+  U' R' U2 R U R' U' R U R' U R U2 F U' R' U R U F' R' U2 R
+case 3027 (ll_index 612913444089227): SOLVED, depth 2, 22 moves
+  via: RUR'URU'R'URU2R' + R'U2RFU'R'U'RUF'
+  U2 R U R' U R U' R' U R U2 R' R' U2 R F U' R' U' R U F'
+case 3035 (ll_index 807432657016978): SOLVED, depth 2, 23 moves
+  via: mirror RUR'UR'U'R2U'R2U2R + invert RUR'UR'U'R2U'R2U2R
+  U' R' U' R U' R U R2 U R2 U2 R' R' U2 R2 U R2 U R U' R U' R'
+case 3043 (ll_index 418093871634578): SOLVED, depth 2, 15 moves
+  via: invert RUR'URU2R' + invert RUR'URU2R'
+  R U2 R' U' R U' R' U' R U2 R' U' R U' R'
+case 3051 (ll_index 612462616615058): SOLVED, depth 2, 15 moves
+  via: RUR'URU2R' + RUR'URU2R'
+  R U R' U R U2 R' U' R U R' U R U2 R'
+case 3059 (ll_index 223123831232658): SOLVED, depth 2, 15 moves
+  via: mirror RUR'URU2R' + mirror RUR'URU2R'
+  R' U' R U' R' U2 R U R' U' R U' R' U2 R
+case 3067 (ll_index 212150189791378): SOLVED, depth 2, 19 moves
+  via: RUR'UR'U'R2U'R2U2R + invert RUR'URU2R'
+  U R U R' U R' U' R2 U' R2 U2 R R U2 R' U' R U' R'
+case 3075 (ll_index 423204882716818): SOLVED, depth 2, 19 moves
+  via: mirror RUR'UR'U'R2U'R2U2R + invert mirror RUR'URU2R'
+  U' R' U' R U' R U R2 U R2 U2 R' R' U2 R U R' U R
+case 3083 (ll_index 813144963520658): SOLVED, depth 2, 15 moves
+  via: mirror RUR'URU2R' + invert RUR'URU2R'
+  U' R' U' R U' R' U2 R R U2 R' U' R U' R'
+case 3091 (ll_index 818406298458258): SOLVED, depth 2, 15 moves
+  via: mirror RUR'URU2R' + invert RUR'URU2R'
+  R' U' R U' R' U2 R U2 R U2 R' U' R U' R'
+case 3099 (ll_index 406819582482578): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert mirror RUR'UR'U'R2U'R2U2R
+  U' R' U' R U' R' U2 R R U2 R2 U' R2 U' R' U R' U R
+case 3107 (ll_index 607351605532818): SOLVED, depth 2, 19 moves
+  via: RUR'URU2R' + invert RUR'UR'U'R2U'R2U2R
+  U R U R' U R U2 R' R' U2 R2 U R2 U R U' R U' R'
+case 3115 (ll_index 217411524728978): SOLVED, depth 2, 15 moves
+  via: RUR'URU2R' + invert mirror RUR'URU2R'
+  R U R' U R U2 R' U2 R' U2 R U R' U R
+case 3123 (ll_index 623736905767058): SOLVED, depth 2, 15 moves
+  via: invert RUR'URU2R' + mirror RUR'URU2R'
+  R U2 R' U' R U' R' U2 R' U' R U' R' U2 R
+case 3131 (ll_index 222973332061262): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + mirror RUR'URU'R'URU2R'
+  R U2 R D R' U2 R D' R2 R' U' R U' R' U R U' R' U2 R
+case 3139 (ll_index 812844140493902): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  R U2 R D R' U2 R D' R2 U R U2 R' U' R U R' U' R U' R'
+case 3147 (ll_index 807582805556302): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert R'U2RFU'R'U'RUF'
+  U2 R U2 R D R' U2 R D' R2 U' F U' R' U R U F' R' U2 R
+case 3155 (ll_index 607050782506062): SOLVED, depth 2, 20 moves
+  via: invert R'U2RFU'R'U'RUF' + R2D'RU2R'DRU2R
+  F U' R' U R U F' R' U2 R U2 R2 D' R U2 R' D R U2 R
+case 3163 (ll_index 406969731021902): SOLVED, depth 2, 22 moves
+  via: invert RUR'URU'R'URU2R' + FURU2R'URUR'F'
+  U2 R U2 R' U' R U R' U' R U' R' F U R U2 R' U R U R' F'
+case 3171 (ll_index 818556446997582): SOLVED, depth 2, 21 moves
+  via: mirror RUR'URUL'UR'U'L + FURU2R'URUR'F'
+  R' U' R U' R' U' L U' R U L' F U R U2 R' U R U R' F'
+case 3179 (ll_index 211999690619982): SOLVED, depth 2, 22 moves
+  via: invert RUR'URU'R'URU2R' + FURU2R'URUR'F'
+  R U2 R' U' R U R' U' R U' R' U2 F U R U2 R' U R U R' F'
+case 3187 (ll_index 623586406595662): SOLVED, depth 2, 23 moves
+  via: RUR'URU'R'URU2R' + FURU2R'URUR'F'
+  U R U R' U R U' R' U R U2 R' U F U R U2 R' U R U R' F'
+case 3195 (ll_index 423505355111502): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + RUR'URU'R'URU2R'
+  R U2 R D R' U2 R D' R2 R U R' U R U' R' U R U2 R'
+case 3203 (ll_index 417642724752462): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  R U2 R D R' U2 R D' R2 U R' U2 R U R' U' R U R' U R
+case 3211 (ll_index 217711997123662): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + R'U2RFU'R'U'RUF'
+  U2 R U2 R D R' U2 R D' R2 R' U2 R F U' R' U' R U F'
+case 3219 (ll_index 612913412865102): SOLVED, depth 2, 21 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  R U2 R D R' U2 R D' R2 U' R' U2 R U R' U' R U R' U R
+case 3227 (ll_index 222973507522486): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + invert RUR'URU2R'
+  U2 R2 D' R U2 R' D R U2 R U' R U2 R' U' R U' R'
+case 3235 (ll_index 812844315955126): SOLVED, depth 2, 18 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U2 R2 D R' U2 R D' R' U2 R' U R' U2 R U R' U R
+case 3243 (ll_index 807582981017526): SOLVED, depth 2, 18 moves
+  via: mirror R2D'RU2R'DRU2R + RUR'URU2R'
+  U2 R2 D R' U2 R D' R' U2 R' U2 R U R' U R U2 R'
+case 3251 (ll_index 607050957967286): SOLVED, depth 2, 18 moves
+  via: R2D'RU2R'DRU2R + mirror RUR'URU2R'
+  U2 R2 D' R U2 R' D R U2 R U2 R' U' R U' R' U2 R
+case 3259 (ll_index 406969906483126): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + FURU2R'URUR'F'
+  U' R U R' U R U2 R' F U R U2 R' U R U R' F'
+case 3267 (ll_index 818556622458806): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + invert mirror RUR'URU2R'
+  U F U R U2 R' U R U R' F' U' R' U2 R U R' U R
+case 3275 (ll_index 211999866081206): SOLVED, depth 2, 21 moves
+  via: invert FURU2R'URUR'F' + invert R'U2RFU'R'U'RUF'
+  U F R U' R' U' R U2 R' U' F' F U' R' U R U F' R' U2 R
+case 3283 (ll_index 623586582056886): SOLVED, depth 2, 21 moves
+  via: RUR'UR'U'R2U'R2U2R + R2D'RU2R'DRU2R
+  R U R' U R' U' R2 U' R2 U2 R U2 R2 D' R U2 R' D R U2 R
+case 3291 (ll_index 423505530572726): SOLVED, depth 2, 22 moves
+  via: invert FURU2R'URUR'F' + R'U2RFU'R'U'RUF'
+  U F R U' R' U' R U2 R' U' F' U R' U2 R F U' R' U' R U F'
+case 3299 (ll_index 417642900213686): SOLVED, depth 2, 22 moves
+  via: invert mirror RUR'URUL'UR'U'L + invert RUR'URU'R'URU2R'
+  L U' R' U L' U R U R' U R R U2 R' U' R U R' U' R U' R'
+case 3307 (ll_index 217712172584886): SOLVED, depth 2, 22 moves
+  via: invert RUR'URUL'UR'U'L + invert mirror RUR'URU'R'URU2R'
+  L' U R U' L U' R' U' R U' R' R' U2 R U R' U' R U R' U R
+case 3315 (ll_index 612913588326326): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URUL'UR'U'L + RUR'URU'R'URU2R'
+  L U' R' U L' U R U R' U R U R U R' U R U' R' U R U2 R'
+case 3323 (ll_index 222973507379902): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 U' R' U2 R U R' U' R U R' U R
+case 3331 (ll_index 812844315812542): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 R U R' U R U' R' U R U2 R'
+case 3339 (ll_index 807582980874942): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 U R' U2 R U R' U' R U R' U R
+case 3347 (ll_index 607050957824702): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 U2 R U R' U R U' R' U R U2 R'
+case 3355 (ll_index 406969906340542): SOLVED, depth 2, 22 moves
+  via: invert FURU2R'URUR'F' + RUR'URU'R'URU2R'
+  U2 F R U' R' U' R U2 R' U' F' R U R' U R U' R' U R U2 R'
+case 3363 (ll_index 818556622316222): SOLVED, depth 2, 22 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror RUR'URUL'UR'U'L
+  U2 F U' R' U R U F' R' U2 R R' U' R U' R' U' L U' R U L'
+case 3371 (ll_index 211999865938622): SOLVED, depth 2, 23 moves
+  via: invert RUR'URUL'UR'U'L + invert R'U2RFU'R'U'RUF'
+  U L' U R U' L U' R' U' R U' R' U F U' R' U R U F' R' U2 R
+case 3379 (ll_index 623586581914302): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URUL'UR'U'L + R'U2RFU'R'U'RUF'
+  U L U' R' U L' U R U R' U R U2 R' U2 R F U' R' U' R U F'
+case 3387 (ll_index 423505530430142): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + invert RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 U R U2 R' U' R U R' U' R U' R'
+case 3395 (ll_index 417642900071102): SOLVED, depth 2, 21 moves
+  via: invert R2D'RU2R'DRU2R + mirror RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 U2 R' U' R U' R' U R U' R' U2 R
+case 3403 (ll_index 217712172442302): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror R2D'RU2R'DRU2R
+  F U' R' U R U F' R' U2 R R2 D R' U2 R D' R' U2 R'
+case 3411 (ll_index 612913588183742): SOLVED, depth 2, 20 moves
+  via: invert R2D'RU2R'DRU2R + mirror RUR'URU'R'URU2R'
+  R' U2 R' D' R U2 R' D R2 R' U' R U' R' U R U' R' U2 R
+case 3419 (ll_index 222973434855686): SOLVED, depth 2, 22 moves
+  via: RUR'URUL'UR'U'L + invert FURU2R'URUR'F'
+  U' R U R' U R U L' U R' U' L F R U' R' U' R U2 R' U' F'
+case 3427 (ll_index 812844243288326): SOLVED, depth 2, 26 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + invert mirror RUR'URU'R'URU2R'
+  U2 R' U' R B R' U' R U R B' R2 U R U' R' U2 R U R' U' R U R' U R
+case 3435 (ll_index 807582908350726): SOLVED, depth 2, 22 moves
+  via: RUR'UR'U'R2U'R2U2R + FURU2R'URUR'F'
+  U' R U R' U R' U' R2 U' R2 U2 R F U R U2 R' U R U R' F'
+case 3443 (ll_index 607050885300486): SOLVED, depth 2, 19 moves
+  via: FURU2R'URUR'F' + mirror RUR'URU2R'
+  U' F U R U2 R' U R U R' F' U' R' U' R U' R' U2 R
+case 3451 (ll_index 406969833816326): SOLVED, depth 2, 18 moves
+  via: FURU2R'URUR'F' + invert RUR'URU2R'
+  U' F U R U2 R' U R U R' F' R U2 R' U' R U' R'
+case 3459 (ll_index 818556549792006): SOLVED, depth 2, 19 moves
+  via: invert RUR'URU2R' + FURU2R'URUR'F'
+  U2 R U2 R' U' R U' R' U' F U R U2 R' U R U R' F'
+case 3467 (ll_index 211999793414406): SOLVED, depth 2, 20 moves
+  via: RUR'UR'U'R2U'R2U2R + mirror R2D'RU2R'DRU2R
+  R U R' U R' U' R2 U' R2 U2 R R2 D R' U2 R D' R' U2 R'
+case 3475 (ll_index 623586509390086): SOLVED, depth 2, 20 moves
+  via: R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  U R2 D' R U2 R' D R U2 R U R' U2 R' D' R U2 R' D R2
+case 3483 (ll_index 423505457905926): SOLVED, depth 2, 17 moves
+  via: mirror RUR'URU2R' + mirror R2D'RU2R'DRU2R
+  U2 R' U' R U' R' U2 R R2 D R' U2 R D' R' U2 R'
+case 3491 (ll_index 417642827546886): SOLVED, depth 1, 12 moves
+  via: invert RUR'URUL'UR'U'L
+  U2 L' U R U' L U' R' U' R U' R'
+case 3499 (ll_index 217712099918086): SOLVED, depth 1, 12 moves
+  via: invert mirror RUR'URUL'UR'U'L
+  U2 L U' R' U L' U R U R' U R
+case 3507 (ll_index 612913515659526): SOLVED, depth 2, 17 moves
+  via: RUR'URU2R' + R2D'RU2R'DRU2R
+  U2 R U R' U R U2 R' R2 D' R U2 R' D R U2 R
+case 3515 (ll_index 222973362339282): SOLVED, depth 2, 22 moves
+  via: RUR'UR'U'R2U'R2U2R + invert R'U2RFU'R'U'RUF'
+  R U R' U R' U' R2 U' R2 U2 R U F U' R' U R U F' R' U2 R
+case 3523 (ll_index 812844170771922): SOLVED, depth 2, 18 moves
+  via: invert RUR'URU2R' + invert R'U2RFU'R'U'RUF'
+  U' R U2 R' U' R U' R' F U' R' U R U F' R' U2 R
+case 3531 (ll_index 807582835834322): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + R'U2RFU'R'U'RUF'
+  U2 R' U' R U' R' U2 R U2 R' U2 R F U' R' U' R U F'
+case 3539 (ll_index 607050812784082): SOLVED, depth 2, 20 moves
+  via: invert mirror R2D'RU2R'DRU2R + mirror RUR'URUL'UR'U'L
+  R U2 R D R' U2 R D' R2 R' U' R U' R' U' L U' R U L'
+case 3547 (ll_index 406969761299922): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URU'R'URU2R' + invert R'U2RFU'R'U'RUF'
+  U R' U2 R U R' U' R U R' U R U F U' R' U R U F' R' U2 R
+case 3555 (ll_index 818556477275602): SOLVED, depth 2, 18 moves
+  via: R'U2RFU'R'U'RUF' + invert mirror RUR'URU2R'
+  R' U2 R F U' R' U' R U F' U' R' U2 R U R' U R
+case 3563 (ll_index 211999720898002): SOLVED, depth 2, 18 moves
+  via: invert R'U2RFU'R'U'RUF' + invert RUR'URU2R'
+  U F U' R' U R U F' R' U2 R R U2 R' U' R U' R'
+case 3571 (ll_index 623586436873682): SOLVED, depth 2, 18 moves
+  via: R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  U2 R' U2 R F U' R' U' R U F' R' U' R U' R' U2 R
+case 3579 (ll_index 423505385389522): SOLVED, depth 2, 22 moves
+  via: mirror RUR'URU'R'URU2R' + R'U2RFU'R'U'RUF'
+  R' U' R U' R' U R U' R' U2 R U' R' U2 R F U' R' U' R U F'
+case 3587 (ll_index 417642755030482): SOLVED, depth 2, 17 moves
+  via: R'U2RFU'R'U'RUF' + RUR'URU2R'
+  R' U2 R F U' R' U' R U F' R U R' U R U2 R'
+case 3595 (ll_index 217712027401682): SOLVED, depth 2, 19 moves
+  via: invert R'U2RFU'R'U'RUF' + mirror RUR'URU2R'
+  U F U' R' U R U F' R' U2 R U' R' U' R U' R' U2 R
+case 3603 (ll_index 612913443143122): SOLVED, depth 2, 21 moves
+  via: invert mirror RUR'URUL'UR'U'L + mirror R2D'RU2R'DRU2R
+  U L U' R' U L' U R U R' U R R2 D R' U2 R D' R' U2 R'
+case 3611 (ll_index 807432657966368): SOLVED, depth 2, 23 moves
+  via: invert mirror RUR'URU'R'URU2R' + invert RUR'URU'R'URU2R'
+  R' U2 R U R' U' R U R' U R U2 R U2 R' U' R U R' U' R U' R'
+case 3617 (ll_index 418093872583968): SOLVED, depth 2, 15 moves
+  via: mirror RUR'URU2R' + invert RUR'URU2R'
+  R' U' R U' R' U2 R U R U2 R' U' R U' R'
+case 3623 (ll_index 612462617564448): SOLVED, depth 2, 16 moves
+  via: invert RUR'URU2R' + mirror RUR'URU2R'
+  U' R U2 R' U' R U' R' U' R' U' R U' R' U2 R
+case 3629 (ll_index 223123832182048): SOLVED, depth 2, 16 moves
+  via: invert mirror RUR'URU2R' + RUR'URU2R'
+  U' R' U2 R U R' U R U R U R' U R U2 R'
+case 3635 (ll_index 212150190740768): SOLVED, depth 1, 12 moves
+  via: invert mirror RUR'URU'R'URU2R'
+  U R' U2 R U R' U' R U R' U R
+case 3643 (ll_index 423204883666208): SOLVED, depth 1, 12 moves
+  via: invert RUR'URU'R'URU2R'
+  U' R U2 R' U' R U R' U' R U' R'
+case 3651 (ll_index 813144964470048): SOLVED, depth 1, 12 moves
+  via: RUR'URU'R'URU2R'
+  U2 R U R' U R U' R' U R U2 R'
+case 3659 (ll_index 818406299407648): SOLVED, depth 1, 11 moves
+  via: mirror RUR'URU'R'URU2R'
+  R' U' R U' R' U R U' R' U2 R
+case 3667 (ll_index 222973507755746): SOLVED, depth 2, 22 moves
+  via: invert RUR'URUL'UR'U'L + FURU2R'URUR'F'
+  U' L' U R U' L U' R' U' R U' R' F U R U2 R' U R U R' F'
+case 3675 (ll_index 812844316188386): SOLVED, depth 2, 18 moves
+  via: invert mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  R' U2 R U R' U R U F R U' R' U' R U2 R' U' F'
+case 3683 (ll_index 807582981250786): SOLVED, depth 2, 21 moves
+  via: FURU2R'URUR'F' + invert RUR'URUL'UR'U'L
+  F U R U2 R' U R U R' F' L' U R U' L U' R' U' R U' R'
+case 3691 (ll_index 607050958200546): SOLVED, depth 2, 26 moves
+  via: mirror RUR'URU'R'URU2R' + mirror RUR'F'RUR'U'R'FR2U'R'
+  U2 R' U' R U' R' U R U' R' U2 R U2 R' U' R B R' U' R U R B' R2 U R
+case 3699 (ll_index 406969906716386): SOLVED, depth 2, 18 moves
+  via: RUR'URU2R' + invert FURU2R'URUR'F'
+  U R U R' U R U2 R' F R U' R' U' R U2 R' U' F'
+case 3707 (ll_index 818556622692066): SOLVED, depth 2, 19 moves
+  via: invert FURU2R'URUR'F' + RUR'URU2R'
+  U' F R U' R' U' R U2 R' U' F' U R U R' U R U2 R'
+case 3715 (ll_index 211999866314466): SOLVED, depth 2, 20 moves
+  via: R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  U R2 D' R U2 R' D R U2 R U' R' U2 R' D' R U2 R' D R2
+case 3723 (ll_index 623586582290146): SOLVED, depth 2, 20 moves
+  via: mirror R2D'RU2R'DRU2R + invert mirror R2D'RU2R'DRU2R
+  U' R2 D R' U2 R D' R' U2 R' U R U2 R D R' U2 R D' R2
+case 3731 (ll_index 423505530805986): SOLVED, depth 2, 17 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  U' R U2 R D R' U2 R D' R2 R' U2 R U R' U R
+case 3739 (ll_index 417642900446946): SOLVED, depth 1, 11 moves
+  via: RUR'URUL'UR'U'L
+  R U R' U R U L' U R' U' L
+case 3747 (ll_index 217712172818146): SOLVED, depth 1, 11 moves
+  via: mirror RUR'URUL'UR'U'L
+  R' U' R U' R' U' L U' R U L'
+case 3755 (ll_index 612913588559586): SOLVED, depth 2, 17 moves
+  via: invert R2D'RU2R'DRU2R + invert RUR'URU2R'
+  U R' U2 R' D' R U2 R' D R2 R U2 R' U' R U' R'
+case 3763 (ll_index 222973508328202): SOLVED, depth 2, 17 moves
+  via: invert RUR'URU2R' + invert FURU2R'URUR'F'
+  R U2 R' U' R U' R' F R U' R' U' R U2 R' U' F'
+case 3771 (ll_index 812844316760842): SOLVED, depth 2, 18 moves
+  via: invert mirror R2D'RU2R'DRU2R + invert RUR'URU2R'
+  U2 R U2 R D R' U2 R D' R2 U2 R U2 R' U' R U' R'
+case 3779 (ll_index 807582981823242): SOLVED, depth 2, 17 moves
+  via: invert R2D'RU2R'DRU2R + invert mirror RUR'URU2R'
+  R' U2 R' D' R U2 R' D R2 U2 R' U2 R U R' U R
+case 3787 (ll_index 607050958773002): SOLVED, depth 2, 17 moves
+  via: invert R2D'RU2R'DRU2R + RUR'URU2R'
+  R' U2 R' D' R U2 R' D R2 U' R U R' U R U2 R'
+case 3795 (ll_index 406969907288842): SOLVED, depth 2, 19 moves
+  via: mirror RUR'URU2R' + invert FURU2R'URUR'F'
+  U' R' U' R U' R' U2 R U F R U' R' U' R U2 R' U' F'
+case 3803 (ll_index 818556623264522): SOLVED, depth 2, 18 moves
+  via: invert FURU2R'URUR'F' + invert RUR'URU2R'
+  U2 F R U' R' U' R U2 R' U' F' R U2 R' U' R U' R'
+case 3811 (ll_index 211999866886922): SOLVED, depth 2, 20 moves
+  via: invert RUR'UR'U'R2U'R2U2R + invert R2D'RU2R'DRU2R
+  R' U2 R2 U R2 U R U' R U' R' R' U2 R' D' R U2 R' D R2
+case 3819 (ll_index 623586582862602): SOLVED, depth 2, 21 moves
+  via: R'U2RFU'R'U'RUF' + FURU2R'URUR'F'
+  U R' U2 R F U' R' U' R U F' F U R U2 R' U R U R' F'
+case 3827 (ll_index 423505531378442): SOLVED, depth 2, 23 moves
+  via: RUR'URU'R'URU2R' + mirror RUR'URUL'UR'U'L
+  U' R U R' U R U' R' U R U2 R' R' U' R U' R' U' L U' R U L'
+case 3835 (ll_index 417642901019402): SOLVED, depth 2, 23 moves
+  via: mirror RUR'URU'R'URU2R' + RUR'URUL'UR'U'L
+  U' R' U' R U' R' U R U' R' U2 R R U R' U R U L' U R' U' L
+case 3843 (ll_index 217712173390602): SOLVED, depth 2, 23 moves
+  via: invert RUR'URU'R'URU2R' + mirror RUR'URUL'UR'U'L
+  R U2 R' U' R U R' U' R U' R' U' R' U' R U' R' U' L U' R U L'
+case 3851 (ll_index 612913589132042): SOLVED, depth 2, 21 moves
+  via: invert R'U2RFU'R'U'RUF' + FURU2R'URUR'F'
+  F U' R' U R U F' R' U2 R U' F U R U2 R' U R U R' F'
+case 3859 (ll_index 222973363286492): SOLVED, depth 2, 25 moves
+  via: RUR'F'RUR'U'R'FR2U'R' + invert RUR'URUL'UR'U'L
+  R U R' F' R U R' U' R' F R2 U' R' U L' U R U' L U' R' U' R U' R'
+case 3867 (ll_index 812844171719132): SOLVED, depth 2, 24 moves
+  via: mirror RUR'URUL'UR'U'L + invert RUR'URUL'UR'U'L
+  U R' U' R U' R' U' L U' R U L' U2 L' U R U' L U' R' U' R U' R'
+case 3875 (ll_index 406969762247132): SOLVED, depth 2, 24 moves
+  via: mirror RUR'URUL'UR'U'L + invert mirror RUR'URUL'UR'U'L
+  U' R' U' R U' R' U' L U' R U L' U2 L U' R' U L' U R U R' U R
+case 3881 (ll_index 818556478222812): SOLVED, depth 2, 24 moves
+  via: RUR'URUL'UR'U'L + invert RUR'URUL'UR'U'L
+  U' R U R' U R U L' U R' U' L U2 L' U R U' L U' R' U' R U' R'
+case 3887 (ll_index 211999721845212): UNSOLVED
+case 3893 (ll_index 623586437820892): SOLVED, depth 2, 19 moves
+  via: mirror R2D'RU2R'DRU2R + invert R2D'RU2R'DRU2R
+  U' R2 D R' U2 R D' R' U2 R' R' U2 R' D' R U2 R' D R2
+case 3899 (ll_index 423505386336732): SOLVED, depth 2, 25 moves
+  via: mirror RUR'F'RUR'U'R'FR2U'R' + invert mirror RUR'URUL'UR'U'L
+  R' U' R B R' U' R U R B' R2 U R U' L U' R' U L' U R U R' U R
+case 3907 (ll_index 417642755977692): SOLVED, depth 2, 24 moves
+  via: RUR'URUL'UR'U'L + invert mirror RUR'URUL'UR'U'L
+  U R U R' U R U L' U R' U' L U2 L U' R' U L' U R U R' U R

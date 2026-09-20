@@ -1,0 +1,32 @@
+R U R' U R U2 R',fb,yes
+R U R' U R U' R' U R U2 R',fb,yes
+r U R' U R U2 r',fb,yes
+r U R' U R U' R' U R U2 r',fb,yes
+RUR'UR'U'R2U'R2U2R,fb,yes
+RU2R'U2R'FRF',fb,yes
+R U R' U R U' R' U' R' F R F',fb,yes
+F U R U2 R' U' R U R' F',fb,yes
+RUR2FRF'y'R'UR,fb,yes
+RU'L'UR'U'L,fb,yes
+FRUR'U'F',lr,yes
+F R U R' U' R U R' U' F',lr,yes
+fRUR'U'f',lr,yes
+M2 U'MU2M'U'M2,no,yes
+RUR'U'R'FR2U'R'U'RUR'F',no,no
+R U R' U' M' URU' r',fb,yes
+R U R' U' R' F R F',fb,yes
+M'U'MU2M'U'M,fb,yes
+r U' r' U' r U r' F' U F,fb,yes
+R' U' R' F R F' U R,fb,yes
+FU'R'URUF'R'U2R,fb,yes
+RUR'UR'FRF'RU2R',fb,yes
+R U' L' U R' U L U L' U L,fb,yes
+R' U' R' F R F' R U' R' U2 R,fb,yes
+R U R' U R' F R F' U2 R' F R F',lr,yes
+F R U' R' U' R U2 R' U' F',fb,yes
+R' U' R U R' F' R U R' U' R' F R2,fb,yes
+F R U R' U' R U' R' U R U R' F',fb,yes
+R' U' F U R U' R' F' R,fb,yes
+F R U R' U' R F' r U R' U' r',fb,yes
+R U R' U' R' F R2 U R' U' F',fb,yes
+R' U' R U' R' U F' U F R,fb,yes
