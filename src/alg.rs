@@ -61,7 +61,7 @@ fn _get_conjugates(json_alg: &JSONAlg) -> Vec<Alg> {
     conjugates
 }
 
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Alg {
     pub name: String,
     pub moves: Vec<Move>,

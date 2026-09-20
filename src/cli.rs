@@ -1,32 +1,50 @@
-// Native CLI entrypoint: load a candidate alg list, enumerate every ZBLL
-// (last-layer) case with the existing cube core, and report which cases get
-// solved (directly, or by chaining two algs together with an AUF between
-// them -- a "duplex") along with the solving move sequence.
+// Native CLI entrypoint. Two modes:
+//
+//   solve     -- does this fixed list of algs solve the ZBLL case set?
+//   optimize  -- what's the cheapest subset of this candidate pool that
+//                (with its mirrors/inverses and duplex pairing) solves it?
 
 use std::collections::HashMap;
 use std::fs;
 use std::path::{Path, PathBuf};
 
-use clap::Parser;
-use serde_json::json;
+use clap::{Args, Parser, Subcommand};
+use serde_json::{json, Value};
 
-use crate::alg::{create_algset, Alg};
+use crate::alg::Alg;
+use crate::candidates;
 use crate::cube::Cube;
 use crate::enumerate::{self, Case};
+use crate::optimize::{self, Objective};
 use crate::search::{self, Solution};
 
 #[derive(Parser)]
 #[command(
     name = "duplex-search",
     version,
-    about = "Check whether a list of candidate algs solves the ZBLL case set"
+    about = "Search candidate algs for ZBLL solutions"
 )]
-struct Args {
-    /// Candidate algorithm list. Either a .csv with one alg per line as
-    /// `moves,mirror,invert` (mirror is one of fb/lr/no, invert is yes/no --
-    /// the format used by duplexalgs.csv), or a .json array of
-    /// {name, moves, mirror: "FB"|"LR"|null, invert} objects (the format the
-    /// web UI's alg list uses).
+struct Cli {
+    #[command(subcommand)]
+    command: Command,
+}
+
+#[derive(Subcommand)]
+enum Command {
+    /// Check whether a fixed list of candidate algs solves the ZBLL case set.
+    Solve(SolveArgs),
+    /// Search a candidate pool for the cheapest subset that solves the ZBLL
+    /// case set, once mirrors/inverses and duplex pairing are accounted for.
+    Optimize(OptimizeArgs),
+}
+
+/// Candidate algorithm list, shared by both subcommands. Either a .csv with
+/// one alg per line as `moves,mirror,invert` (mirror is one of fb/lr/no,
+/// invert is yes/no -- the format used by duplexalgs.csv), or a .json array
+/// of {name, moves, mirror: "FB"|"LR"|null, invert} objects (the format the
+/// web UI's alg list uses).
+#[derive(Args)]
+struct SolveArgs {
     #[arg(short, long)]
     algs: PathBuf,
 
@@ -48,18 +66,68 @@ struct Args {
     #[arg(long)]
     quiet: bool,
 
-    /// Which last-layer case set to check against: `zbll` is the ~493 cases
-    /// where edges are already oriented (only corner O/P + edge P remain --
-    /// what "ZBLL algs" are meant to solve); `all` is the full 1LLL case set
-    /// (edges may also need orienting).
     #[arg(long, default_value = "zbll")]
     case_set: CaseSet,
+}
+
+#[derive(Args)]
+struct OptimizeArgs {
+    /// Candidate pool to pick a subset from (same .csv/.json formats as `solve`).
+    #[arg(short, long)]
+    algs: PathBuf,
+
+    /// How many candidate algs to chain per case when evaluating coverage
+    /// (see `solve --help`).
+    #[arg(short, long, default_value_t = 2)]
+    depth: usize,
+
+    /// Which last-layer case set to cover: `zbll` (default) or `all` (1LLL).
+    #[arg(long, default_value = "zbll")]
+    case_set: CaseSet,
+
+    /// Cost added per move in a candidate's base alg -- the default (1.0)
+    /// makes the greedy search minimize total moves across the chosen set.
+    #[arg(long, default_value_t = 1.0)]
+    per_move_weight: f64,
+
+    /// Cost added per candidate picked, regardless of its length -- set this
+    /// (and --per-move-weight 0) to minimize the number of algs instead.
+    #[arg(long, default_value_t = 0.0)]
+    per_alg_weight: f64,
+
+    /// Stop after picking this many algs even if some cases stay uncovered.
+    #[arg(long)]
+    max_algs: Option<usize>,
+
+    /// Write the chosen set and full per-case solution report as JSON here.
+    #[arg(short, long)]
+    out: Option<PathBuf>,
+
+    /// Suppress warnings about candidate lines that failed to parse.
+    #[arg(long)]
+    quiet: bool,
 }
 
 #[derive(Clone, Copy, PartialEq, Eq)]
 enum CaseSet {
     Zbll,
     All,
+}
+
+impl CaseSet {
+    fn label(self) -> &'static str {
+        match self {
+            CaseSet::Zbll => "ZBLL",
+            CaseSet::All => "1LLL",
+        }
+    }
+
+    fn filter(self, all_cases: Vec<Case>) -> Vec<Case> {
+        match self {
+            CaseSet::Zbll => all_cases.into_iter().filter(Case::is_zbll).collect(),
+            CaseSet::All => all_cases,
+        }
+    }
 }
 
 impl std::str::FromStr for CaseSet {
@@ -74,14 +142,16 @@ impl std::str::FromStr for CaseSet {
 }
 
 pub fn run() {
-    let args = Args::parse();
-
-    let (algs, errors) = load_algs(&args.algs);
-    if !args.quiet {
-        for err in &errors {
-            eprintln!("warning: {}", err);
-        }
+    match Cli::parse().command {
+        Command::Solve(args) => run_solve(args),
+        Command::Optimize(args) => run_optimize(args),
     }
+}
+
+fn run_solve(args: SolveArgs) {
+    let (candidates, errors) = candidates::load(&args.algs);
+    warn(&errors, args.quiet);
+    let algs: Vec<Alg> = candidates.into_iter().flat_map(|c| c.variants).collect();
     if algs.is_empty() {
         eprintln!(
             "error: no usable algorithms loaded from {}",
@@ -96,143 +166,114 @@ pub fn run() {
         errors.len(),
     );
 
-    let all_cases = enumerate::get_cases();
-    let cases: Vec<Case> = match args.case_set {
-        CaseSet::Zbll => all_cases.into_iter().filter(Case::is_zbll).collect(),
-        CaseSet::All => all_cases,
-    };
-    println!(
-        "enumerated {} {} cases",
-        cases.len(),
-        match args.case_set {
-            CaseSet::Zbll => "ZBLL",
-            CaseSet::All => "1LLL",
-        }
-    );
+    let cases = args.case_set.filter(enumerate::get_cases());
+    println!("enumerated {} {} cases", cases.len(), args.case_set.label());
 
-    let depth = args.depth.clamp(1, 2);
-    if depth != args.depth {
-        eprintln!("note: --depth clamped to {} (only 1 or 2 are supported)", depth);
-    }
-
+    let depth = clamp_depth(args.depth);
     let solutions = search::search(&algs, &cases, depth);
 
-    report(&cases, &solutions, args.show_unsolved);
+    report_coverage(&cases, &solutions, args.show_unsolved);
 
     if let Some(out) = &args.out {
-        write_report(out, &cases, &solutions);
+        let content = json!({ "cases": case_entries(&cases, &solutions) });
+        write_json(out, &content);
         println!("wrote full report to {}", out.display());
     }
 }
 
-fn load_algs(path: &Path) -> (Vec<Alg>, Vec<String>) {
-    let content = fs::read_to_string(path).unwrap_or_else(|err| {
-        eprintln!("error: couldn't read {}: {}", path.display(), err);
+fn run_optimize(args: OptimizeArgs) {
+    let (candidates, errors) = candidates::load(&args.algs);
+    warn(&errors, args.quiet);
+    if candidates.is_empty() {
+        eprintln!(
+            "error: no usable algorithms loaded from {}",
+            args.algs.display()
+        );
         std::process::exit(1);
-    });
-
-    let is_json = path
-        .extension()
-        .and_then(|ext| ext.to_str())
-        .map(|ext| ext.eq_ignore_ascii_case("json"))
-        .unwrap_or(false);
-
-    if is_json {
-        load_json_algs(&content)
-    } else {
-        load_csv_algs(&content)
     }
-}
+    println!(
+        "loaded {} candidate algs from {} ({} entries skipped)",
+        candidates.len(),
+        args.algs.display(),
+        errors.len(),
+    );
 
-/// `moves,mirror,invert` per line -- mirror in {fb, lr, no}, invert in {yes, no}.
-fn load_csv_algs(content: &str) -> (Vec<Alg>, Vec<String>) {
-    let mut algs = Vec::new();
-    let mut errors = Vec::new();
+    let cases = args.case_set.filter(enumerate::get_cases());
+    println!("enumerated {} {} cases", cases.len(), args.case_set.label());
 
-    for (i, raw_line) in content.lines().enumerate() {
-        let line = raw_line.trim();
-        if line.is_empty() {
-            continue;
-        }
-        let fields: Vec<&str> = line.split(',').map(|f| f.trim()).collect();
-        if fields.len() < 3 {
-            errors.push(format!(
-                "line {}: expected `moves,mirror,invert`, got {:?}",
-                i + 1,
-                line
-            ));
-            continue;
-        }
-
-        let moves = fields[0];
-        let mirror = match fields[1].to_lowercase().as_str() {
-            "fb" => Some("FB"),
-            "lr" => Some("LR"),
-            "no" | "" => None,
-            other => {
-                errors.push(format!(
-                    "line {}: unknown mirror type {:?} (expected fb/lr/no)",
-                    i + 1,
-                    other
-                ));
-                continue;
-            }
-        };
-        let invert = match fields[2].to_lowercase().as_str() {
-            "yes" => true,
-            "no" | "" => false,
-            other => {
-                errors.push(format!(
-                    "line {}: unknown invert flag {:?} (expected yes/no)",
-                    i + 1,
-                    other
-                ));
-                continue;
-            }
-        };
-
-        let name: String = moves.chars().filter(|c| !c.is_whitespace()).collect();
-        let entry = json!([{
-            "name": name,
-            "moves": moves,
-            "mirror": mirror,
-            "invert": invert,
-        }]);
-
-        match create_algset(entry.to_string()) {
-            Ok(mut parsed) => algs.append(&mut parsed),
-            Err(err) => errors.push(format!("line {}: {}", i + 1, err)),
-        }
-    }
-
-    (algs, errors)
-}
-
-/// Array of {name, moves, mirror: "FB"|"LR"|null, invert} objects.
-fn load_json_algs(content: &str) -> (Vec<Alg>, Vec<String>) {
-    let mut algs = Vec::new();
-    let mut errors = Vec::new();
-
-    let values: Vec<serde_json::Value> = match serde_json::from_str(content) {
-        Ok(values) => values,
-        Err(err) => {
-            eprintln!("error: invalid JSON alg list: {}", err);
-            std::process::exit(1);
-        }
+    let depth = clamp_depth(args.depth);
+    let objective = Objective {
+        per_alg: args.per_alg_weight,
+        per_move: args.per_move_weight,
     };
 
-    for (i, value) in values.into_iter().enumerate() {
-        let entry = json!([value]);
-        match create_algset(entry.to_string()) {
-            Ok(mut parsed) => algs.append(&mut parsed),
-            Err(err) => errors.push(format!("entry {}: {}", i + 1, err)),
-        }
+    let report = optimize::greedy_cover(&candidates, &cases, depth, &objective, args.max_algs);
+
+    println!();
+    for pick in &report.picked {
+        println!(
+            "+ {} ({} moves) -> {} new case(s)",
+            pick.label, pick.cost_moves, pick.newly_covered
+        );
     }
 
-    (algs, errors)
+    let total_moves: usize = report.picked.iter().map(|p| p.cost_moves).sum();
+    println!();
+    println!(
+        "chose {} alg(s), {} total moves, covering {} / {} cases ({:.1}%)",
+        report.picked.len(),
+        total_moves,
+        report.covered,
+        report.total,
+        100.0 * report.covered as f64 / report.total as f64,
+    );
+    if report.covered < report.total {
+        println!(
+            "(stopped {} case(s) short -- try a bigger --algs pool, --depth 2, or raise/drop --max-algs)",
+            report.total - report.covered,
+        );
+    }
+
+    if let Some(out) = &args.out {
+        let picked: Vec<Value> = report
+            .picked
+            .iter()
+            .map(|p| {
+                json!({
+                    "label": p.label,
+                    "cost_moves": p.cost_moves,
+                    "newly_covered": p.newly_covered,
+                })
+            })
+            .collect();
+        let content = json!({
+            "picked": picked,
+            "covered": report.covered,
+            "total": report.total,
+            "cases": case_entries(&cases, &report.solutions),
+        });
+        write_json(out, &content);
+        println!("wrote full report to {}", out.display());
+    }
 }
 
-fn report(cases: &[Case], solutions: &HashMap<u64, Vec<Solution>>, show_unsolved: bool) {
+fn warn(errors: &[String], quiet: bool) {
+    if !quiet {
+        for err in errors {
+            eprintln!("warning: {}", err);
+        }
+    }
+}
+
+fn clamp_depth(depth: usize) -> usize {
+    let clamped = depth.clamp(1, 2);
+    if clamped != depth {
+        eprintln!("note: --depth clamped to {} (only 1 or 2 are supported)", clamped);
+    }
+    clamped
+}
+
+fn report_coverage(cases: &[Case], solutions: &HashMap<u64, Vec<Solution>>, show_unsolved: bool) {
     let total = cases.len();
     let mut solved_depth1 = 0;
     let mut solved_depth2_only = 0;
@@ -277,8 +318,8 @@ fn case_to_cube(case: &Case) -> Cube {
     cube
 }
 
-fn write_report(path: &Path, cases: &[Case], solutions: &HashMap<u64, Vec<Solution>>) {
-    let entries: Vec<serde_json::Value> = cases
+fn case_entries(cases: &[Case], solutions: &HashMap<u64, Vec<Solution>>) -> Vec<Value> {
+    cases
         .iter()
         .map(|case| {
             let sols = solutions.get(&case.ll_index);
@@ -296,10 +337,12 @@ fn write_report(path: &Path, cases: &[Case], solutions: &HashMap<u64, Vec<Soluti
                 "alternatives": sols.map(|s| s.len()).unwrap_or(0),
             })
         })
-        .collect();
+        .collect()
+}
 
-    let content = serde_json::to_string_pretty(&entries).expect("solutions are always serializable");
-    fs::write(path, content).unwrap_or_else(|err| {
+fn write_json(path: &Path, content: &Value) {
+    let text = serde_json::to_string_pretty(content).expect("report is always serializable");
+    fs::write(path, text).unwrap_or_else(|err| {
         eprintln!("error: couldn't write {}: {}", path.display(), err);
         std::process::exit(1);
     });

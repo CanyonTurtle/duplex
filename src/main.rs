@@ -10,6 +10,10 @@ mod enumerate;
 #[cfg(not(target_arch = "wasm32"))]
 mod search;
 #[cfg(not(target_arch = "wasm32"))]
+mod candidates;
+#[cfg(not(target_arch = "wasm32"))]
+mod optimize;
+#[cfg(not(target_arch = "wasm32"))]
 mod cli;
 
 #[cfg(target_arch = "wasm32")]
