@@ -99,6 +99,13 @@ struct OptimizeArgs {
     #[arg(long)]
     max_algs: Option<usize>,
 
+    /// Algs you already know (same .csv/.json format as --algs) -- included
+    /// for free before the search starts, so it only looks for what to add
+    /// on top. Use this to ask "what's the best next alg for a basis I
+    /// already have?".
+    #[arg(long)]
+    seed: Option<PathBuf>,
+
     /// Write the chosen set and full per-case solution report as JSON here.
     #[arg(short, long)]
     out: Option<PathBuf>,
@@ -207,7 +214,28 @@ fn run_optimize(args: OptimizeArgs) {
         per_move: args.per_move_weight,
     };
 
-    let report = optimize::greedy_cover(&candidates, &cases, depth, &objective, args.max_algs);
+    let seed_variants: Vec<Alg> = match &args.seed {
+        Some(path) => {
+            let (seed_candidates, seed_errors) = candidates::load(path);
+            warn(&seed_errors, args.quiet);
+            println!(
+                "seeded with {} alg(s) from {}",
+                seed_candidates.len(),
+                path.display()
+            );
+            seed_candidates.into_iter().flat_map(|c| c.variants).collect()
+        }
+        None => Vec::new(),
+    };
+
+    let report = optimize::greedy_cover(
+        &candidates,
+        &cases,
+        depth,
+        &objective,
+        args.max_algs,
+        &seed_variants,
+    );
 
     println!();
     for pick in &report.picked {

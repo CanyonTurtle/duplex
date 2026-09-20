@@ -59,14 +59,22 @@ pub fn greedy_cover(
     depth: usize,
     objective: &Objective,
     max_picks: Option<usize>,
+    seed_variants: &[Alg],
 ) -> Report {
     let target: HashSet<u64> = cases.iter().map(|c| c.ll_index).collect();
-    let mut uncovered = target.clone();
 
-    let mut chosen_variants: Vec<Alg> = Vec::new();
+    // algs already known going in (free -- don't count toward cost/picked,
+    // just narrow down what's left to cover)
+    let mut chosen_variants: Vec<Alg> = seed_variants.to_vec();
+    let mut solutions = search::search(&chosen_variants, cases, depth);
+    let mut uncovered: HashSet<u64> = target
+        .iter()
+        .filter(|ll| !solutions.get(ll).map(|s| !s.is_empty()).unwrap_or(false))
+        .cloned()
+        .collect();
+
     let mut remaining: Vec<usize> = (0..candidates.len()).collect();
     let mut picked = Vec::new();
-    let mut solutions: HashMap<u64, Vec<Solution>> = HashMap::new();
 
     while !uncovered.is_empty() {
         if let Some(max) = max_picks {
