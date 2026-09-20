@@ -72,6 +72,11 @@ their generated reports:
 - `nine-basis` — the 8-alg optimized basis plus one hand-picked addition: 492/493
 - `ten-basis-complete` — `nine-basis` plus one more addition: **493/493, full ZBLL coverage**
 - `site-broad` — this repo's own default alg list (32 algs), reduced via `optimize`: 9 algs, 491/493
+- `web-zbll-full` — all ~488 published ZBLL algorithms from
+  [speedcubedb.com](https://speedcubedb.com/a/3x3/ZBLL) (the U/L/T/H/Pi/S/AS
+  subsets, one alg per case) plus a handful of standard PLLs, reduced via
+  `optimize`: **12 algs, 114 moves → 493/493, found automatically in under a
+  minute**
 
 TODO
 
