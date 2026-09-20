@@ -1,0 +1,7 @@
+# Modern rust-lld defaults to erroring on undefined symbols for
+# wasm32-unknown-unknown. This project hand-rolls its JS<->wasm ABI (see
+# src/web/interop.rs) with externs like `stack_push`/`console_stack` that are
+# only provided by the host JS glue at instantiation time, not at link time,
+# so they need to stay as unresolved imports.
+[target.wasm32-unknown-unknown]
+rustflags = ["-C", "link-args=--allow-undefined"]

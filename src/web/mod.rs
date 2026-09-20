@@ -1,4 +1,3 @@
-#[macro_use]
 pub mod interop;
 
 use serde::{Serialize, Deserialize};

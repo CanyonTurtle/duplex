@@ -101,6 +101,16 @@ pub struct Case {
     pub corners: Vec<Corner>,
 }
 
+impl Case {
+    /// `get_cases` enumerates every 1LLL case (any edge orientation). ZBLL
+    /// specifically assumes F2L+EO is already done, i.e. edges are already
+    /// oriented and only corner permutation/orientation + edge permutation
+    /// are left to solve -- this is that subset (~493 cases).
+    pub fn is_zbll(&self) -> bool {
+        self.edges.iter().all(|e| e.0 == Face::U)
+    }
+}
+
 #[allow(non_snake_case)]
 pub fn get_cases() -> Vec<Case> {
 

@@ -4,29 +4,31 @@ use nom::types::CompleteStr as Input;
 use nom::*;
 
 named!(layer<Input, Layer>,
-    map!(
-        one_of!("UFRLBDMESufrlbdxyz"),
-        |ly| match ly {
-            'U' => Layer::U,
-            'F' => Layer::F,
-            'R' => Layer::R,
-            'L' => Layer::L,
-            'B' => Layer::B,
-            'D' => Layer::D,
-            'M' => Layer::M,
-            'E' => Layer::E,
-            'S' => Layer::S,
-            'u' => Layer::Uw,
-            'f' => Layer::Fw,
-            'r' => Layer::Rw,
-            'l' => Layer::Lw,
-            'b' => Layer::Bw,
-            'd' => Layer::Dw,
-            'x' => Layer::X,
-            'y' => Layer::Y,
-            'z' => Layer::Z,
+    do_parse!(
+        base: one_of!("UFRLBDMESufrlbdxyz") >>
+        wide: opt!(char!('w')) >>
+        (match (base, wide.is_some()) {
+            // SiGN notation (lowercase already means wide) and Uw/Fw/... suffix notation
+            ('U', false) => Layer::U,
+            ('U', true) | ('u', _) => Layer::Uw,
+            ('F', false) => Layer::F,
+            ('F', true) | ('f', _) => Layer::Fw,
+            ('R', false) => Layer::R,
+            ('R', true) | ('r', _) => Layer::Rw,
+            ('L', false) => Layer::L,
+            ('L', true) | ('l', _) => Layer::Lw,
+            ('B', false) => Layer::B,
+            ('B', true) | ('b', _) => Layer::Bw,
+            ('D', false) => Layer::D,
+            ('D', true) | ('d', _) => Layer::Dw,
+            ('M', _) => Layer::M,
+            ('E', _) => Layer::E,
+            ('S', _) => Layer::S,
+            ('x', _) => Layer::X,
+            ('y', _) => Layer::Y,
+            ('z', _) => Layer::Z,
             _ => unreachable!()
-        }
+        })
     )
 );
 
